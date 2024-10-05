@@ -20,7 +20,7 @@ html {
 }
 body {
   overflow-x: hidden;
-  font-family: YourOriginalFont, sans-serif !important;
+  font-family: "YourOriginalFont", "sans-serif";
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -45,7 +45,7 @@ body {
   padding-right: 100px;
   padding-top: 9px;
 }
-.swiper-free-mode > .swiper-wrapper {
+.swiper-free-mode > .swiper-wrantpper {
   margin: 0 !important;
 }
 .main-haeding {
@@ -130,7 +130,7 @@ body {
     display: none;
   }
   .logo-sec {
-    display: none !important;
+    display: none;
   }
   .menu-section {
     display: none;
@@ -330,7 +330,7 @@ body {
     display: none;
   }
   .swiper-pagination {
-    top: 282px !important;
+    top: 282px;
     height: 35px;
   }
   .logos-swipers {
@@ -576,8 +576,6 @@ body {
   width: 450px;
 }
 .new-swiper {
-  width: 50px;
-  height: 50px !important;
   margin: 0;
   padding: 0;
   border: 1px solid var(--main-color);
