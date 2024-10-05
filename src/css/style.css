@@ -800,7 +800,7 @@ body {
   margin-right: auto;
 }
 .subscribe {
-  background-image: url("../image/Footer/AnyConv.com__footerbg.webp");
+  background-image: url("/image/Footer/AnyConv.com__footerbg.webp");
   position: relative;
   color: #fff;
 }
