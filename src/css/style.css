@@ -178,7 +178,8 @@ body {
 .icon-menu {
   color: #fff;
   border-bottom: 1px solid;
-  padding: 30px 35px 13px;
+  padding: 30px 21px 13px;
+  margin: auto;
 }
 .brands-content,
 .categories-content {
@@ -241,6 +242,10 @@ body {
 .swiper .swiper-wrapper .swiper-slide img {
   height: 400px;
 }
+
+.search-bar {
+  background-color: #ececec;
+}
 @media (max-width: 768px) {
   .main-haeding {
     padding-left: 20px;
@@ -275,6 +280,7 @@ body {
     left: 10px;
     font-size: 25px;
   }
+
   .navbars .fa-minus:before {
     content: "\f068";
     position: absolute;
@@ -311,8 +317,14 @@ body {
   .navigation-icons {
     display: none !important;
   }
+  @media (max-width: 666px) {
+    .search-bar {
+      width: 146px;
+      padding-left: 35px;
+    }
+  }
   .search-bar {
-    width: auto;
+    width: 261px;
     padding-left: 35px;
   }
   .navbar {
@@ -629,6 +641,66 @@ body {
   width: 450px;
   height: 163px;
 }
+
+@media (min-width: 770px) and (max-width: 1024px) {
+  .tab-lis-mop {
+    display: block;
+    margin-left: -36px;
+  }
+  .navbar {
+    margin-left: -86px;
+    padding-right: 6px;
+  }
+  .sandisk {
+    margin-bottom: 80px;
+  }
+  .card-view {
+    width: 486px;
+    height: 1200px;
+  }
+  .new-view-card {
+    width: 925px;
+    margin-left: 12px;
+  }
+  .new-viewer-card {
+    width: 925px;
+    margin-left: 12px;
+  }
+  .main-card-new {
+    margin-left: -68px !important;
+    margin-right: -55px !important;
+  }
+  .res-h {
+  }
+  .col-lg-4 {
+  }
+  .card-name {
+  }
+  .product-card-new {
+    width: 330px;
+  }
+  .product-card-new img {
+  }
+  .product-details-new {
+    padding-left: 15px !important;
+  }
+  .star-rating-new {
+    padding-top: 10px;
+  }
+  .main-footer {
+    padding-right: 20px !important;
+  }
+  .General {
+    padding-top: 10px !important;
+  }
+  .third-footer {
+  }
+  .footer-logo {
+    display: contents;
+    font-size: 33px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .parent {
     position: relative;
@@ -873,6 +945,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-right: 150px;
+  background-color: #ececec;
 }
 .powered,
 .third-footer {
@@ -976,15 +1049,21 @@ body {
     top: 32px;
     font-size: 43px;
     left: 13px;
+    margin-right: 50px;
   }
-  .footer-logo a img {
-    padding-right: 13px;
-  }
-  .third-footer {
-    position: relative;
-  }
+}
+.footer-logo a img {
+  padding-right: 13px;
+}
+.third-footer {
+  position: relative;
+}
+.General {
+  padding-top: 102px;
+  padding-left: 7px;
+}
+@media (min-width: 1025px) {
   .General {
-    padding-top: 102px;
-    padding-left: 7px;
+    padding-top: 37px;
   }
 }

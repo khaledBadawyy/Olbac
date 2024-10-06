@@ -65,6 +65,9 @@ swiper = new Swiper(".logo-slider-card", {
     1200: {
       slidesPerView: 7.5,
     },
+    1024: {
+      slidesPerView: 4.5,
+    },
   },
 });
 
