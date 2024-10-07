@@ -627,6 +627,7 @@ body {
 }
 .full-image img {
   width: 100%;
+  height: 433px;
 }
 .sw-logo {
   width: 130px;
@@ -670,16 +671,8 @@ body {
     margin-left: -68px !important;
     margin-right: -55px !important;
   }
-  .res-h {
-  }
-  .col-lg-4 {
-  }
-  .card-name {
-  }
   .product-card-new {
     width: 330px;
-  }
-  .product-card-new img {
   }
   .product-details-new {
     padding-left: 15px !important;
@@ -693,11 +686,12 @@ body {
   .General {
     padding-top: 10px !important;
   }
-  .third-footer {
-  }
   .footer-logo {
     display: contents;
     font-size: 33px !important;
+  }
+  .dropdown-menu {
+    margin-left: -200px;
   }
 }
 
@@ -1067,3 +1061,85 @@ body {
     padding-top: 37px;
   }
 }
+
+/* start stands  */
+.private {
+  background-color: #ececec;
+}
+.stand-main {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  margin-top: 35px;
+}
+.dropdown {
+  padding-left: 20px;
+}
+.filter-head .dropdown .dropdown-toggle {
+  background-color: #f0f0fe;
+  color: black;
+  padding: 9px 34px;
+  border: 2px solid var(--main-color);
+}
+.filter-head .filter-item .active {
+  color: var(--main-color);
+}
+.fa-list:before {
+  content: "\f03a";
+  padding-right: 20px;
+}
+/* .stand-filter-main {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+} */
+.categories-filter {
+  background-color: white;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgb(85 27 15 / 10%);
+  height: 1000px;
+}
+.categories-filter h5 {
+  color: black;
+  padding-bottom: 20px;
+}
+
+.list-style-elements {
+  background-color: #f3f3f3;
+  padding: 14px;
+
+  margin-left: 18px;
+  position: relative;
+}
+.list-style-elements .product-card-stand {
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  padding-left: 9px;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.product-card-stand {
+  width: 70%;
+  height: auto;
+  margin-left: 61px;
+}
+
+.card-style-stand {
+  width: 235px;
+}
+.product-card-stand .product-icons {
+  left: 79px;
+}
+
+/* end stands  */
