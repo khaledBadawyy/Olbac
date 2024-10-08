@@ -13,6 +13,9 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- alpine lib  -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <title>Olbac</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
@@ -52,15 +55,15 @@
                 </div>
 
                 <div class="offcanvas-body">
-                    <a href=""><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
+                    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
 
-                    <!-- زر القائمة الرئيسية مع السهم -->
+
                     <a href="#" class="categories-toggle">
                         <i class="fa fa-database" aria-hidden="true"></i> Categories
                         <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i> <!-- السهم -->
                     </a>
 
-                    <!-- محتويات القائمة التي ستظهر عند الضغط -->
+
                     <div class="categories-content">
                         <a href="">Photography Lighting</a>
                         <a href="">Microphones</a>
@@ -68,7 +71,7 @@
                         <a href="">Lenses</a>
                         <a href="">Flashes</a>
                         <a href="">Memory Cards</a>
-                        <a href="">Stands</a>
+                        <a href="index-stands.html">Stands</a>
                         <a href="">Photography Bags</a>
                         <a href="">Photography Tent</a>
                         <a href="">Stabilizers</a>
@@ -86,10 +89,10 @@
 
                     <a href="#" class="brands-toggle">
                         <i class="fa fa-database" aria-hidden="true"></i> Brands
-                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i> <!-- السهم -->
+                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i>
                     </a>
 
-                    <!-- محتويات قائمة العلامات التجارية -->
+
                     <div class="brands-content">
                         <a href="#">Sandisk</a>
                         <a href="#">Boya</a>
@@ -259,11 +262,15 @@
                     <P>Filter By</P>
                 </div>
                 <div class="dropdown">
-                    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                    <button type="button" class="btn btn-primary dropdown-toggle " data-bs-toggle="dropdown">
                         Default
                     </button>
+                    <button type="button" class="btn ellipsis " data-bs-toggle="dropdown">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </button>
+
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Default</a></li>
+                        <li><a class="dropdown-item res-card" href="#">Default</a></li>
                         <li><a class="dropdown-item" href="#">Most populer</a></li>
                         <li><a class="dropdown-item" href="#">Price Low to High</a></li>
                         <li><a class="dropdown-item" href="#">Price High to Low</a></li>
@@ -279,44 +286,142 @@
 
         </div>
     </div>
-    <div class=" ml-2 mt-5">
+    <div class=" ml-2 mt-3">
         <div class="row stand-main">
             <!-- Sidebar Categories -->
-            <div class="col-md-3 categories-filter">
-                <h5>Categories</h5>
-                <ul class="list-unstyled">
-                    <li><input type="checkbox"> PHOTOGRAPHY LIGHTING</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <li><input type="checkbox"> MICROPHONES</li>
-                    <li><input type="checkbox"> CAMERAS</li>
-                    <li><input type="checkbox"> LENSES</li>
-                    <li><input type="checkbox"> FLASHES</li>
-                    <li><input type="checkbox"> MEMORY CARDS</li>
-                    <!-- Add other categories here -->
+            <div class="col-md-3 categories-filter"
+                x-data="{ openCategories: false, openBrands: false, openPrice: false, openRates: false }">
+
+                <!-- Categories Section -->
+                <h5 @click="openCategories = !openCategories" :class="openCategories ? 'text-black' : 'text-var'"
+                    class="cursor-pointer flex justify-between">
+                    Categories
+                    <i :class="openCategories ? 'text-black rotate-180' : 'text-var'"
+                        class="fa fa-caret-down transition-transform duration-300"></i>
+                </h5>
+                <ul class="list-unstyled" x-show="openCategories" x-transition>
+                    <li><input type="checkbox"> <a href="">Photography Lighting</a> </li>
+                    <li><input type="checkbox"> <a href="">Microphones</a></li>
+                    <li><input type="checkbox"> <a href="">Cameras</a></li>
+                    <li><input type="checkbox"> <a href="">Lenses</a></li>
+                    <li><input type="checkbox"> <a href="">Flashes</a></li>
+                    <li><input type="checkbox"> <a href="">Memory Cards</a></li>
+                    <li><input type="checkbox"><a href="index-stands.html">Stands</a></li>
+                    <li><input type="checkbox"> <a href="">Photography Bags</a></li>
+                    <li><input type="checkbox"><a href="">Photography Tent</a></li>
+                    <li><input type="checkbox"> <a href="">Stabilizers</a></li>
+                    <li><input type="checkbox"><a href="">Batteries & Chargers</a></li>
+                    <li><input type="checkbox"> <a href="">Photography Backdrops</a></li>
+                    <li><input type="checkbox"> <a href="">Screen Monitor</a></li>
+                    <li><input type="checkbox"> <a href="">Triggers</a></li>
+                    <li><input type="checkbox"> <a href="">Flash Drive</a></li>
+                    <li><input type="checkbox"> <a href="">Camera Accessories</a></li>
+                    <li><input type="checkbox"> <a href="">Storage</a></li>
+                    <li><input type="checkbox"> <a href="">Battery Grip</a></li>
+                    <li><input type="checkbox"> <a href="">EasyCover</a></li>
+                    <li><input type="checkbox"> <a href="">Accessories</a></li>
+                    <!-- Add more categories as needed -->
+                </ul>
+
+                <!-- Brands Section -->
+                <h5 @click="openBrands = !openBrands" :class="openBrands ? 'text-black' : 'text-var'"
+                    class="cursor-pointer flex justify-between mt-4">
+                    Brands
+                    <i :class="openBrands ? 'text-black rotate-180' : 'text-var'"
+                        class="fa fa-caret-down transition-transform duration-300"></i>
+                </h5>
+                <ul class="list-unstyled" x-show="openBrands" x-transition>
+                    <li><input type="checkbox"> <a href="">SANDISK</a></li>
+                    <li><input type="checkbox"> <a href="">BOYA</a></li>
+                    <li><input type="checkbox"> <a href="">CAMELION</a></li>
+                    <li><input type="checkbox"> <a href="">FANCIER</a></li>
+                    <li><input type="checkbox"> <a href="">FUJIFILM</a></li>
+                    <li><input type="checkbox"> <a href="">GENERAL</a></li>
+                    <li><input type="checkbox"> <a href="">GODOX</a></li>
+                    <li><input type="checkbox"> <a href="">LEXAR</a></li>
+                    <li><input type="checkbox"> <a href="">NANLITE</a></li>
+                    <li><input type="checkbox"> <a href="">VISICO</a></li>
+                    <li><input type="checkbox"> <a href="">YONGNUO</a></li>
+                    <li><input type="checkbox"> <a href="">ZHIYUN</a></li>
+                    <li><input type="checkbox"> <a href="">FEELWORLD</a></li>
+                    <li><input type="checkbox"> <a href="">LILLIPUT</a></li>
+                    <li><input type="checkbox"> <a href="">VILTROX</a></li>
+                    <li><input type="checkbox"> <a href="">TRIOPO</a></li>
+                    <li><input type="checkbox"> <a href="">NEST</a></li>
+                    <li><input type="checkbox"> <a href="">DJI</a></li>
+                    <li><input type="checkbox"> <a href="">COMICA</a></li>
+                    <li><input type="checkbox"> <a href="">GENERIC</a></li>
+                    <li><input type="checkbox"> <a href="">SEVENOAK</a></li>
+                    <li><input type="checkbox"> <a href="">GoPro</a></li>
+                    <li><input type="checkbox"> <a href="">Pixel</a></li>
+                    <li><input type="checkbox"> <a href="">MEIKE</a></li>
+                    <li><input type="checkbox"> <a href="">Aputure</a></li>
+                    <li><input type="checkbox"> <a href="">Weifeng</a></li>
+                    <li><input type="checkbox"> <a href="">EasyCover</a></li>
+                    <li><input type="checkbox"> <a href="">MAGMOD</a></li>
+                    <li><input type="checkbox"> <a href="">Sigma</a></li>
+                    <li><input type="checkbox"> <a href="">AWEI</a></li>
+                    <li><input type="checkbox"> <a href="">Lens Go</a></li>
+                    <li><input type="checkbox"> <a href="">GREEN L</a></li>
+                    <li><input type="checkbox"> <a href="">Hollyland</a></li>
+                    <li><input type="checkbox"> <a href="">insta 360</a></li>
+                    <li><input type="checkbox"> <a href="">Twinmos</a></li>
+                    <!-- Add more brands as needed -->
+                </ul>
+
+                <!-- Price Section -->
+                <h5 @click="openPrice = !openPrice" :class="openPrice ? 'text-black' : 'text-var'"
+                    class="cursor-pointer flex justify-between mt-4">
+                    Price
+                    <i :class="openPrice ? 'text-black rotate-180' : 'text-var'"
+                        class="fa fa-caret-down transition-transform duration-300"></i>
+                </h5>
+                <div class="filter-section" x-show="openPrice" x-transition>
+                    <div class="price-filter">
+                        <div class="price-range">
+                            <label for="price-from">From (EGP)</label>
+                            <input type="number" id="price-from" placeholder="6">
+                        </div>
+                        <div class="price-range price-to-eg">
+                            <label for="price-to">To (EGP)</label>
+                            <input type="number" id="price-to" placeholder="-2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rates Section -->
+                <h5 @click="openRates = !openRates" :class="openRates ? 'text-black' : 'text-var'"
+                    class="cursor-pointer flex justify-between mt-4">
+                    Rates
+                    <i :class="openRates ? 'text-black rotate-180' : 'text-var'"
+                        class="fa fa-caret-down transition-transform duration-300"></i>
+                </h5>
+                <ul class="list-unstyled" x-show="openRates" x-transition>
+                    <li>
+                        <input type="checkbox">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                            class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                    </li>
+                    <li>
+                        <input type="checkbox">
+                        <i class="fa fa-star"></i>
+                    </li>
                 </ul>
             </div>
             <!-- Product Grid -->
@@ -341,8 +446,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -366,8 +471,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -391,8 +496,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -416,8 +521,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -441,8 +546,33 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="icon-card">
+                                <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
+                                <i class="fa fa-cart-arrow-down icon-shop-product" aria-hidden="true"> Add To
+                                    Card</i>
+                            </div>
+                        </div>
+                        <div class="card-product-card card-style-stand card-style-stand bg-white">
+                            <img src="./image/tab-list/66c5cac38854f_715lqkkaWNL._AC_SL1500_.webp" alt="Product Image"
+                                class="product-image-card" loading="lazy">
+
+                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12 </div>
+                            <div class="price-star-card">
+                                <div class="product-price-card">599 EGP</div>
+                                <div class="star-rating-card">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </div>
+                            </div>
+                            <div class="product-icons">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -466,8 +596,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -492,8 +622,8 @@
 
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -518,8 +648,8 @@
 
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -543,8 +673,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -569,8 +699,8 @@
 
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -594,8 +724,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                             <div class="icon-card">
                                 <i class="fa fa-heart-o icon-heart-product" aria-hidden="true"></i>
@@ -620,8 +750,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
 
                         </div>
@@ -643,8 +773,8 @@
                                 </div>
                             </div>
                             <div class="product-icons ">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
 
                         </div>
@@ -664,8 +794,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
 
                         </div>
@@ -684,8 +814,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -704,8 +834,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -723,8 +853,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -742,8 +872,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -761,8 +891,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -780,8 +910,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -800,8 +930,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -820,8 +950,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -840,28 +970,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
-                            </div>
-                        </div>
-                        <div class="card-product-card card-style-stand bg-white res-card">
-                            <img src="./image/tab-list/dae6.webp" alt="Product Image" class="product-image-card"
-                                loading="lazy">
-
-                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12 </div>
-                            <div class="price-star-card">
-                                <div class="product-price-card">599 EGP</div>
-                                <div class="star-rating-card">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                            </div>
-                            <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -879,8 +989,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -898,8 +1008,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -917,8 +1027,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -936,8 +1046,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -955,8 +1065,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -974,8 +1084,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -993,8 +1103,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="card-product-card card-style-stand bg-white res-card">
@@ -1012,8 +1122,8 @@
                                 </div>
                             </div>
                             <div class="product-icons">
-                                <i class="fa fa-shopping-cart"></i>
-                                <i class="fa fa-heart style-heart "></i>
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </div>
                         </div>
 
@@ -1108,6 +1218,7 @@
             </div>
         </div>
     </footer>
+    <script src="./src/main.js"></script>
 
 </body>
 

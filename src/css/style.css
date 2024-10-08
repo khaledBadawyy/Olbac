@@ -503,9 +503,13 @@ body {
   justify-content: center;
   gap: 17px;
 }
-.style-heart {
-  background-color: #d60000;
+@media (min-width: 768px) {
+  .fa-heart-o {
+    background-color: #d60000;
+    color: white;
+  }
 }
+
 .product-icons i {
   padding: 5px;
   border-radius: 50%;
@@ -730,6 +734,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
     gap: 8px;
+    padding-left: 4px;
   }
   .card-product-card {
     position: relative;
@@ -765,7 +770,9 @@ body {
     display: none;
   }
   .product-image-card {
-    width: 140px;
+    width: 136px;
+    height: 115px;
+    margin-left: 19px;
   }
   .product-title-card {
     font-size: 11px;
@@ -1062,7 +1069,7 @@ body {
   }
 }
 
-/* start stands  */
+/* start  categories-filter */
 .private {
   background-color: #ececec;
 }
@@ -1086,7 +1093,7 @@ body {
   background-color: #f0f0fe;
   color: black;
   padding: 9px 34px;
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
 }
 .filter-head .filter-item .active {
   color: var(--main-color);
@@ -1095,51 +1102,199 @@ body {
   content: "\f03a";
   padding-right: 20px;
 }
-/* .stand-filter-main {
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
-  margin-right: auto;
-} */
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  margin-top: -11px;
+}
 .categories-filter {
   background-color: white;
   padding: 15px;
   box-shadow: 0 4px 12px rgb(85 27 15 / 10%);
-  height: 1000px;
+  height: fit-content;
+  width: 313px;
+  position: relative;
 }
 .categories-filter h5 {
   color: black;
   padding-bottom: 20px;
 }
+.categories-filter h5 i {
+  position: absolute;
+  left: 278px;
+}
+.categories-filter a {
+  text-decoration: none;
+  color: black;
+  padding-left: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.filter-item {
+  margin-right: 70px;
+}
+.filter-section {
+  width: 200px;
+  position: relative;
+}
+.rotate-180 {
+  transform: rotate(180deg);
+}
+.text-black {
+  color: black;
+}
+
+.text-var {
+  color: var(--main-color);
+}
+
+.price-filter h5,
+.rates-filter h5 {
+  font-size: 21px;
+  margin-bottom: 3px;
+  padding-top: 10px;
+}
+
+.price-range {
+  margin-bottom: 10px;
+}
+.price-filter {
+}
+.price-range label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.price-range input {
+  width: 67%;
+  height: 26px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.price-to-eg {
+  position: absolute;
+  top: 0px;
+  right: -149px;
+}
+.rates-filter ul {
+  padding-left: 0;
+}
+
+.rates-filter li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rates-filter input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.rates-filter ul i {
+  color: orange;
+  font-size: 16px;
+}
+/* .end categories-filter */
+/* start .list-style-elements */
 
 .list-style-elements {
   background-color: #f3f3f3;
   padding: 14px;
-
   margin-left: 18px;
   position: relative;
 }
+
 .list-style-elements .product-card-stand {
   width: 250px;
   height: 280px;
   background-color: white;
-  padding-left: 9px;
+  padding-left: 15px;
   position: relative;
   transition: transform 0.2s ease-in-out;
   border-radius: 5px;
   margin-bottom: 15px;
 }
-.product-card-stand {
-  width: 70%;
-  height: auto;
-  margin-left: 61px;
+.fa-cart-plus {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 18px;
 }
 
-.card-style-stand {
-  width: 235px;
-}
-.product-card-stand .product-icons {
-  left: 79px;
+@media (min-width: 769px) {
+  .product-card-stand {
+    width: 1150px;
+    height: auto;
+    margin-left: 12px;
+  }
+  .card-style-stand {
+    width: 262px;
+  }
+  .product-card-stand .product-icons {
+    left: 97px;
+  }
+  .product-card-stand .fa-heart-o {
+    background-color: #d60000;
+    color: white;
+  }
+  .product-card-stand .product-image-card {
+    width: 156px;
+    height: 103px;
+    margin-left: 42px;
+  }
+  .ellipsis {
+    display: none;
+  }
+  .list-unstyled ul li .fa-star {
+    color: #ffc107;
+  }
 }
 
-/* end stands  */
+@media (max-width: 767px) {
+  .product-card-stand {
+    margin-top: 10px;
+    height: 1854px;
+  }
+  .card-style-stand {
+  }
+  .categories-filter {
+    display: none;
+  }
+  .filter-item {
+    display: none;
+  }
+  .filter-head {
+    margin-top: 20px;
+  }
+  .filter-head .dropdown {
+  }
+  .filter-head .dropdown .dropdown-toggle {
+    display: none;
+  }
+  .ellipsis {
+    margin-left: -13px;
+    margin-top: 1px;
+  }
+
+  .filter-head .dropdown-menu {
+    background-color: black;
+    opacity: 0.5;
+    padding: 0px;
+    border-radius: 0;
+  }
+  .filter-head .dropdown-menu ul {
+  }
+  .filter-head .dropdown-menu ul li {
+  }
+  .filter-head .dropdown-menu a {
+    color: white;
+    border-bottom: 1px solid;
+    font-size: 18px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+  }
+}
+
+/* start .list-style-elements */
