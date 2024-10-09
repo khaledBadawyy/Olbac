@@ -1279,13 +1279,27 @@ body {
     margin-left: -331px;
     margin-top: 72px;
   }
+  .list .card-product-card {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(10px); /* لتحريك البطاقة لأعلى عند ظهورها */
+  }
+
+  .list .card-product-card.visible {
+    opacity: 1;
+    transform: translateY(0); /* العودة إلى موضعها الأصلي */
+  }
+}
+.active > .page-link,
+.page-link.active {
+  background-color: var(--main-color);
+}
+.product-card-stand nav ul li a {
+  color: black;
 }
 @media (max-width: 767px) {
   .product-card-stand {
     margin-top: 10px;
     height: 1854px;
-  }
-  .card-style-stand {
   }
   .categories-filter {
     display: none;

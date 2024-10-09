@@ -144,12 +144,10 @@ document
     arrow.classList.toggle("rotate");
   });
 
-// Get the elements
 const listView = document.getElementById("listView");
 const gridView = document.getElementById("gridView");
 const productContainer = document.getElementById("productContainer");
 
-// Add event listeners for toggling
 listView.addEventListener("click", function () {
   productContainer.classList.remove("grid");
   productContainer.classList.add("list");
@@ -159,18 +157,29 @@ gridView.addEventListener("click", function () {
   productContainer.classList.remove("list");
   productContainer.classList.add("grid");
 });
-// تحديد الأيقونات
+
 const listViewButton = document.querySelector(".fa-list");
 const gridViewButton = document.querySelector(".fa-th-large");
 
-// إضافة حدث النقر على زر العرض كـ List
 listViewButton.addEventListener("click", function () {
   listViewButton.classList.add("active");
   gridViewButton.classList.remove("active");
-  // تغيير طريقة عرض المنتج إلى قائمة
 });
-// إضافة حدث النقر على زر العرض كـ Grid
+
 gridViewButton.addEventListener("click", function () {
   gridViewButton.classList.add("active");
   listViewButton.classList.remove("active");
 });
+function changeView(viewClass) {
+  productContainer.className = ""; // إزالة جميع الكلاسات
+  productContainer.classList.add(viewClass); // إضافة الكلاس الجديد
+  const cards = document.querySelectorAll(".card-product-card");
+
+  // إخفاء البطاقات ثم إظهارها مع تأثير
+  cards.forEach((card) => {
+    card.classList.remove("visible"); // إخفاء البطاقة
+    setTimeout(() => {
+      card.classList.add("visible"); // إظهار البطاقة بعد وقت محدد
+    }, 300); // وقت التأخير لبدء إظهار البطاقة بعد الإخفاء
+  });
+}
