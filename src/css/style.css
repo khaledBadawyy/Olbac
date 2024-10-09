@@ -1158,8 +1158,6 @@ body {
 .price-range {
   margin-bottom: 10px;
 }
-.price-filter {
-}
 .price-range label {
   display: block;
   font-size: 14px;
@@ -1199,14 +1197,12 @@ body {
 }
 /* .end categories-filter */
 /* start .list-style-elements */
-
 .list-style-elements {
   background-color: #f3f3f3;
   padding: 14px;
   margin-left: 18px;
   position: relative;
 }
-
 .list-style-elements .product-card-stand {
   width: 250px;
   height: 280px;
@@ -1222,15 +1218,11 @@ body {
   color: white;
   font-size: 18px;
 }
-
 @media (min-width: 769px) {
   .product-card-stand {
     width: 1150px;
     height: auto;
     margin-left: 12px;
-  }
-  .card-style-stand {
-    width: 262px;
   }
   .product-card-stand .product-icons {
     left: 97px;
@@ -1247,11 +1239,47 @@ body {
   .ellipsis {
     display: none;
   }
-  .list-unstyled ul li .fa-star {
+  .filter-star .fa-star {
     color: #ffc107;
   }
+  .product-card-stand.grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product-card-stand.list {
+    display: block;
+  }
+  .card-style-stand {
+    width: 262px;
+  }
+  .list .card-style-stand {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 150px;
+  }
+  .list .card-product-card:hover {
+    transform: scale(1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border: 1px solid var(--main-color);
+  }
+  .card-product-card:hover .product-image-card {
+    background-color: gray;
+    opacity: 0.5;
+  }
+  .list .product-image-card {
+    margin: 14px 69px 10px 13px;
+  }
+  .list .product-icons {
+    top: 55px;
+    right: -625px;
+  }
+  .list .price-star-card {
+    margin-left: -331px;
+    margin-top: 72px;
+  }
 }
-
 @media (max-width: 767px) {
   .product-card-stand {
     margin-top: 10px;
@@ -1268,8 +1296,6 @@ body {
   .filter-head {
     margin-top: 20px;
   }
-  .filter-head .dropdown {
-  }
   .filter-head .dropdown .dropdown-toggle {
     display: none;
   }
@@ -1277,16 +1303,11 @@ body {
     margin-left: -13px;
     margin-top: 1px;
   }
-
   .filter-head .dropdown-menu {
     background-color: black;
     opacity: 0.5;
     padding: 0px;
     border-radius: 0;
-  }
-  .filter-head .dropdown-menu ul {
-  }
-  .filter-head .dropdown-menu ul li {
   }
   .filter-head .dropdown-menu a {
     color: white;
@@ -1296,5 +1317,3 @@ body {
     padding-top: 7px;
   }
 }
-
-/* start .list-style-elements */

@@ -279,8 +279,8 @@
             </div>
 
             <div class="filter-item">
-                <i class="fa fa-list fa-2x" data-class="list"></i>
-                <i class="fa fa-th-large fa-2x active" data-class="grid"></i>
+                <i class="fa fa-list fa-2x" id="listView" data-class="list"></i>
+                <i class="fa fa-th-large fa-2x active" id="gridView" data-class="grid"></i>
 
             </div>
 
@@ -396,7 +396,7 @@
                     <i :class="openRates ? 'text-black rotate-180' : 'text-var'"
                         class="fa fa-caret-down transition-transform duration-300"></i>
                 </h5>
-                <ul class="list-unstyled" x-show="openRates" x-transition>
+                <ul class="list-unstyled filter-star" x-show="openRates" x-transition>
                     <li>
                         <input type="checkbox">
                         <i class="fa fa-star"></i>
@@ -407,16 +407,21 @@
                     </li>
                     <li>
                         <input type="checkbox">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                            class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </li>
                     <li>
                         <input type="checkbox">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </li>
                     <li>
                         <input type="checkbox">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
                     </li>
                     <li>
                         <input type="checkbox">
@@ -428,7 +433,7 @@
 
 
 
-            <div class=" mb-5  card-style-tab product-card-stand ">
+            <div class=" mb-5  product-row-card-stand card-style-tab product-card-stand grid " id="productContainer">
                 <div class="row">
                     <div class="card-list-tab ">
                         <div class="card-product-card card-style-stand bg-white ">
@@ -1130,6 +1135,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
     <!-- end stands   -->
