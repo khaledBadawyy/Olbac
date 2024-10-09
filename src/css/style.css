@@ -164,7 +164,7 @@ img,
 .login-user p {
   padding: 15px;
 }
-i .fa-search {
+i.fa-search {
   position: absolute;
   top: 11px;
   left: 11px;
