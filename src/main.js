@@ -171,15 +171,14 @@ gridViewButton.addEventListener("click", function () {
   listViewButton.classList.remove("active");
 });
 function changeView(viewClass) {
-  productContainer.className = ""; // إزالة جميع الكلاسات
-  productContainer.classList.add(viewClass); // إضافة الكلاس الجديد
+  productContainer.className = "";
+  productContainer.classList.add(viewClass);
   const cards = document.querySelectorAll(".card-product-card");
 
-  // إخفاء البطاقات ثم إظهارها مع تأثير
   cards.forEach((card) => {
-    card.classList.remove("visible"); // إخفاء البطاقة
+    card.classList.remove("visible");
     setTimeout(() => {
-      card.classList.add("visible"); // إظهار البطاقة بعد وقت محدد
-    }, 300); // وقت التأخير لبدء إظهار البطاقة بعد الإخفاء
+      card.classList.add("visible");
+    }, 300);
   });
 }
