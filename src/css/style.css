@@ -32,15 +32,6 @@ img,
 ::-webkit-scrollbar-thumb:hover {
   background: #557479;
 }
-.container-haeder {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 9px;
-}
-.main-haeding {
-  margin-left: auto;
-  margin-right: auto;
-}
 .offcanvas-body a,
 .swiper-slide {
   text-decoration: none;
@@ -49,17 +40,12 @@ img,
   margin: 0 !important;
 }
 .main-haeding {
-  padding-left: 75px;
-  padding-right: 75px;
   margin-bottom: 30px;
   color: #333;
 }
 .icon-haed,
 .navbar ul li a {
   color: #fff;
-}
-.main-now {
-  position: relative;
 }
 .main-haeding::after {
   content: "";
@@ -68,9 +54,9 @@ img,
   background-color: #a2a2a2;
   top: 50px;
   width: calc(100% - 600px);
-  left: 62px;
+  left: 0px;
 }
-.main-now button {
+.main-haeding button {
   background-color: #fff;
   padding: 8px;
   border-radius: 7px;
@@ -126,15 +112,10 @@ img,
   background-color: var(--main-color);
 }
 @media (min-width: 768px) {
-  .navbars {
-    display: none;
-  }
-  .logo-sec {
-    display: none !important;
-  }
+  .navbars,
+  .logo-sec,
   .menu-section {
     display: none;
-    color: var(--main-color);
   }
   .swiper {
     width: 90%;
@@ -142,14 +123,16 @@ img,
   }
 }
 .menu-section {
-  left: 16px;
-  bottom: 9px;
-  font-size: 18px;
+  color: var(--main-color);
+  left: 11px;
+  bottom: -2px;
+  font-size: 20px;
+  z-index: 5;
 }
 .logo-sec {
   position: absolute;
-  left: 64px;
-  top: 15px;
+  left: 68px;
+  top: -1px;
 }
 .container-fluid {
   font-size: 14px;
@@ -164,10 +147,21 @@ img,
 .login-user p {
   padding: 15px;
 }
-i.fa-search {
-  position: absolute;
-  top: 11px;
-  left: 11px;
+@media (max-width: 768px) {
+  i.fa-search {
+    position: absolute;
+    top: 11px;
+    left: 118px;
+    z-index: 1;
+  }
+}
+@media (min-width: 768px) {
+  i.fa-search {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+    z-index: 1;
+  }
 }
 
 .login-user span {
@@ -323,15 +317,12 @@ i.fa-search {
   .navigation-icons {
     display: none !important;
   }
-  @media (max-width: 666px) {
-    .search-bar {
-      width: 146px;
-      padding-left: 35px;
-    }
-  }
+
   .search-bar {
     width: 261px;
     padding-left: 35px;
+    position: relative;
+    left: 106px;
   }
   .navbar {
     display: none;
