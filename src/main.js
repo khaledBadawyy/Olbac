@@ -3,6 +3,7 @@ swiper = new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+    spaceBetween: 100,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -37,7 +38,7 @@ swiper = new Swiper(".logo-swiper", {
       spaceBetween: 60,
     },
     1200: {
-      slidesPerView: 7.5,
+      slidesPerView: 7,
       spaceBetween: 70,
     },
   },
@@ -63,7 +64,7 @@ swiper = new Swiper(".logo-slider-card", {
       slidesPerView: 6,
     },
     1200: {
-      slidesPerView: 7.5,
+      slidesPerView: 7,
     },
     1024: {
       slidesPerView: 4.5,
@@ -91,7 +92,7 @@ swiper = new Swiper(".swiper-main", {
       slidesPerView: 6,
     },
     1200: {
-      slidesPerView: 7,
+      slidesPerView: 6,
     },
   },
 });
@@ -115,7 +116,7 @@ swiper = new Swiper(".swiper-logo", {
       slidesPerView: 6,
     },
     1200: {
-      slidesPerView: 7,
+      slidesPerView: 6,
     },
   },
 });
@@ -182,3 +183,29 @@ function changeView(viewClass) {
     }, 300);
   });
 }
+// start product card
+verticalSwiper = new Swiper(".vertical-swiper", {
+  direction: 'vertical',
+  loop: false,
+  slidesPerView: 3,
+  spaceBetween: 10,
+  speed: 300,
+  resistance: false,
+  freeMode: true,
+  freeModeMomentum: true,
+  freeModeMomentumRatio: 0.5,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 6,
+    },
+    1200: {
+      slidesPerView: 7,
+    },
+  },
+});
