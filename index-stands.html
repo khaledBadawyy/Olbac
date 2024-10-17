@@ -23,7 +23,8 @@
 
 <body class="private">
     <!-- start navbar mobile  -->
-    <div class="navbars">
+    <!-- start navbar mobile  -->
+    <div class="navbars ">
         <a href="#" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
         <a href="#"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
         <a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
@@ -38,10 +39,10 @@
         <strong class="d-flex justify-content-center">Offers Up To 50%</strong>
     </div>
 
-    <div class="container-fluid bg-white sticky-top z-index-2 p-2">
-        <div class=" container d-flex align-items-center justify-content-between position-relative ">
+    <div class="container-fluid stand-nav-bar  bg-white sticky-top z-index-2 ">
+        <div class="  head-bar container d-flex align-items-center justify-content-between position-relative ">
             <!-- menu section -->
-            <div class="offcanvas offcanvas-start bg- w-75" id="demo">
+            <div class="offcanvas offcanvas-start w-75" id="demo">
                 <div class="offcanvas-header">
                     <div class="login-user">
                         <button type="button" class="btn-close btn-menu" data-bs-dismiss="offcanvas"></button>
@@ -61,7 +62,7 @@
 
                     <a href="#" class="categories-toggle">
                         <i class="fa fa-database" aria-hidden="true"></i> Categories
-                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i> <!-- السهم -->
+                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i>
                     </a>
 
 
@@ -154,7 +155,7 @@
 
             <!-- Logo Section -->
             <div class="align-items-center logo-section">
-                <img src="image/header/AnyConv.com__logo%20(1).webp" alt="Logo" class="me-2" width="175" height="75"
+                <img src="image/header/AnyConv.com__logo%20(1).webp" alt="Logo" class="me-2" width="150" height="63"
                     loading="lazy" />
             </div>
             <div class="align-items-center logo-sec">
@@ -165,16 +166,20 @@
             <!-- Search Bar -->
             <div class="flex-grow-1 mx-3 position-relative">
                 <i class="fa fa-search" aria-hidden="true"></i>
-                <input type="text" class="form-control search-bar" placeholder="     Search Here..." />
+                <input type="text" class="form-control search-bar" placeholder="   Search Here..." />
             </div>
 
             <!-- Navigation Icons -->
-            <div class="d-flex align-items-center gap-5 navigation-icons">
-                <img src="image/header/AnyConv.com__dealZone.webp" alt="zone" width="30" height="27" loading="lazy">
-                <span>
-                    <img src="image/header/AnyConv.com__flag.webp" alt="Flag" width="30" height="20" loading="lazy" />
-                </span>
-                <div>
+            <div class=" deal-logos d-flex align-items-center navigation-icons ">
+                <img class="deal-zone" src="image/gaenral/dealzone_LE_auto_x2.jpg" alt="zone" width="100" height="50"
+                    loading="lazy">
+
+
+                <a href=""><img class="masr" src="image/gaenral/mas3.png" alt="Flag" width="70" height="74"
+                        loading="lazy" /></a>
+
+
+                <div class="icon-bar">
                     <a href="#" class="text-dark"><i class="fa fa-shopping-cart icon-haed"></i></a>
                     <a href="#" class="text-dark"><i class="fa fa-heart icon-haed"></i></a>
                     <a href="#" class="text-dark"><i class="fa fa-user icon-haed"></i></a>
@@ -184,8 +189,8 @@
     </div>
 
     <!-- start nav-bar  -->
-    <nav class="navbar navbar-expand-sm container-fluid">
-        <div class="container ">
+    <nav class="navbar navbar-expand-sm container-fluid   ">
+        <div class="container  ">
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
@@ -217,15 +222,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">STANDS
+                        <a class="nav-link" href="index-stands.html">STANDS
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">PHOTOGRAPHY BAGS
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">MORE</a>
@@ -289,7 +291,7 @@
         </div>
     </div>
     <div class=" ml-2 mt-3">
-        <div class="row stand-main">
+        <div class="stand-main-filter  ">
             <!-- Sidebar Categories -->
             <div class="col-md-3 categories-filter"
                 x-data="{ openCategories: false, openBrands: false, openPrice: false, openRates: false }">
@@ -432,12 +434,9 @@
                 </ul>
             </div>
             <!-- Product Grid -->
-
-
-
             <div class=" mb-5  product-row-card-stand card-style-tab product-card-stand grid " id="productContainer">
-                <div class="row">
-                    <div class="card-list-tab ">
+                <div class="stand-filter">
+                    <div class="card-list-tab stand-main-filter ">
                         <div class="card-product-card card-style-stand bg-white ">
                             <img src="./image/tab-list/dae6.webp" alt="Product Image" class="product-image-card"
                                 loading="lazy">
@@ -1157,7 +1156,6 @@
                     </div>
                 </div>
             </div>
-
 
         </div>
     </div>
