@@ -42,6 +42,7 @@ img {
 ::-webkit-scrollbar-thumb:hover {
   background: #557479;
 }
+
 .swiper-free-mode > .swiper-wrapper {
   margin: 0 !important;
 }
@@ -346,7 +347,7 @@ img {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #f3f0f0;
     display: flex;
     justify-content: space-around;
     padding: 30px 0 4px;
@@ -406,7 +407,7 @@ img {
     display: none !important;
   }
   .search-bar {
-    width: 243px;
+    width: 219px;
     padding-left: 35px;
     left: 106px;
   }
@@ -1067,8 +1068,8 @@ img {
     width: 450px;
   }
   .footer-logo {
-    margin-left: 150px;
-    padding-left: 20px;
+    margin-left: 85px;
+    padding-left: 0;
   }
   .General {
     margin-top: -38px;
@@ -1082,7 +1083,7 @@ img {
 @media (max-width: 768px) {
   .email-container button,
   .email-container input[type="email"] {
-    width: 362px;
+    width: 317px;
     border-radius: 9px;
   }
   .subscribe .img-sub {
@@ -1129,10 +1130,10 @@ img {
   }
   .footer-logo {
     position: absolute;
-    top: 32px;
-    font-size: 43px;
-    left: 13px;
-    margin-right: 50px;
+    top: 36px;
+    font-size: 32px;
+    left: 10px;
+    margin-right: 0px;
   }
 }
 .filter-section,
@@ -1185,8 +1186,7 @@ img {
   width: 98%;
   margin: auto;
 }
-.stand-filter {
-}
+
 .categories-filter {
   background-color: #fff;
   padding: 15px;
@@ -1385,5 +1385,274 @@ img {
     font-size: 18px;
     padding-bottom: 7px;
     padding-top: 7px;
+  }
+}
+
+/* start details  */
+
+.swiper-logo-details {
+}
+.new-swiper-details {
+  width: 50px;
+  height: 50px !important;
+  margin: 0;
+  padding: 2px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+.swiper-container {
+  width: 100px;
+  height: 350px;
+}
+.fa-angle-up,
+.fa-angle-down {
+  margin-right: 20px;
+}
+.product-details .product-title-image {
+  font-size: 20px;
+}
+.product-details .image-block {
+  margin-left: 100px;
+}
+.product-details .image-block:hover img {
+}
+
+.icon-add-card {
+  margin-right: 92px;
+  font-size: 19px;
+  margin-top: 15px;
+}
+
+.icon-add-card .fa-share-alt {
+  padding-right: 21px;
+}
+.icon-add-card .fa-heart-o {
+  background-color: white;
+  color: #d80c18;
+}
+.product-info {
+  margin-top: 35px;
+}
+.product-info .price-offer {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--main-color);
+  margin: -7px 16px;
+}
+.rate-product {
+  font-size: 12px;
+}
+
+.rate-product .stars-icon {
+  color: #ced5e1;
+}
+.available {
+}
+.available span {
+  font-size: 14px;
+}
+.buy-price {
+  background-color: #f0f2f7;
+}
+.buy-price .add {
+  display: grid;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-top: 45px;
+}
+
+.buy-price .add .add-to {
+  border: none;
+  background-color: #198754;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+}
+.buy-price .add .wish-list {
+  margin-top: 21px;
+  margin-bottom: 52px;
+  background-color: white;
+  color: black;
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.buy-price .add .add-to .fa-cart-plus {
+  padding-right: 12px;
+  background-color: #198754;
+}
+
+.buy-price .add .wish-list .fa-heart-o {
+  color: black;
+  background-color: white;
+  padding-right: 8px;
+}
+.memory-card {
+}
+.memory-card .memory-name {
+}
+.memory-card .memory-name P {
+  font-size: 30px;
+}
+
+.memory-card .memory-num {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -14px;
+}
+
+.memory-card .memory-num p {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 9px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.memory-card .memory-num p.gb128 {
+  margin-right: 266px;
+}
+.memory-card .memory-num p.active {
+  background-color: black;
+  color: white;
+}
+.product-color {
+  width: 30px;
+  height: 30px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.tab-content .tab-pane p {
+  padding-top: 20px;
+}
+.tab-content .tab-pane iframe {
+  width: 100%;
+  height: 500px;
+}
+@media (max-width: 768px) {
+  .product-details .product-title-image {
+    font-size: 16px;
+  }
+
+  .swiper-container {
+    display: none;
+  }
+  .fa-angle-up,
+  .fa-angle-down {
+    display: none;
+  }
+  .product-details .image-block {
+    margin-left: 49px;
+  }
+  .product-details .image-block img {
+    height: 270px;
+  }
+  .product-info .spacial-share img {
+    width: 100px;
+    height: 60px;
+  }
+
+  .icon-add-card {
+    margin-right: 16px;
+  }
+  .product-info .price-offer {
+    padding-left: 20px;
+  }
+
+  .product-info .rate-product {
+  }
+  .buy-price .add {
+    display: none;
+  }
+  .memory-card .memory-num p.gb128 {
+    margin-right: 237px;
+  }
+  .tab-content .tab-pane iframe {
+    height: 282px;
+  }
+  .General {
+    margin-bottom: 65px;
+  }
+  .mobil-add-card {
+    position: fixed;
+    background-color: #f3f0f0;
+    width: 100%;
+    height: 65px;
+    bottom: 55px;
+    z-index: 3;
+  }
+  .mobil-add-card span.quantity {
+    position: absolute;
+    left: 9px;
+    top: 3px;
+    color: #a09696;
+    font-size: 17px;
+  }
+  .mobil-add-card span.quantity-num {
+    position: absolute;
+    top: 27px;
+    left: 30px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .mobil-add-card button {
+    border: none;
+    background-color: #198754;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-left: 96px;
+    margin-top: 9px;
+    width: 284px;
+  }
+  .mobil-add-card .fa-cart-plus {
+    padding-right: 12px;
+    background-color: #198754;
+  }
+  .product-details .img-container {
+    display: none !important;
+  }
+}
+.product-details .product-color {
+}
+.product-details .swiper-slide.active {
+}
+.product-details .product-color:hover {
+}
+
+@media (min-width: 768px) {
+  .product-details .img-container {
+    position: relative;
+    margin-left: 100px;
+  }
+
+  .product-details .lens {
+    position: absolute;
+    border: 2px solid #000;
+    width: 100px;
+    height: 100px;
+    display: none;
+    cursor: none;
+  }
+
+  .product-details .zoom-result {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    width: 400px;
+    height: 400px;
+    left: 105%;
+    top: 0;
+    overflow: hidden;
+  }
+
+  .product-details .zoom-result img {
+    position: absolute;
+    width: 800px;
+  }
+}
+@media (max-width: 377px) {
+  .mobil-add-card button {
+    margin-left: 89px;
+    width: 264px;
   }
 }

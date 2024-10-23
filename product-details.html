@@ -17,18 +17,26 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alpine lib  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Olbac | Product</title>
+    <title>Olbac | details</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-    <!-- start navbar mobile  -->
-    <div class="navbars ">
-        <a href="#" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-        <a href="#"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
-        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
-        <a href="#"> <i class="fa fa-star-o roud1" aria-hidden="true"></i>Favourites</a>
-        <a href="#"> <i class="fa fa-cart-arrow-down roud2" aria-hidden="true"></i>Cart</a>
+
+    <div>
+        <div class="navbars ">
+            <div class="mobil-add-card">
+                <span class="quantity">quantity</span>
+                <span class="quantity-num">2</span>
+                <button class="add-to"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
+                    Cart</button>
+            </div>
+            <a href="#" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+            <a href="#"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
+            <a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
+            <a href="#"> <i class="fa fa-star-o roud1" aria-hidden="true"></i>Favourites</a>
+            <a href="#"> <i class="fa fa-cart-arrow-down roud2" aria-hidden="true"></i>Cart</a>
+        </div>
     </div>
 
     <!-- start navbar mobile -->
@@ -38,8 +46,8 @@
         <strong class="d-flex justify-content-center">Offers Up To 50%</strong>
     </div>
 
-    <div class="container-fluid bg-white sticky-top z-index-2 p-2">
-        <div class=" container d-flex align-items-center justify-content-between position-relative ">
+    <div class="container-fluid  bg-white sticky-top z-index-2 ">
+        <div class="  head-bar container d-flex align-items-center justify-content-between position-relative ">
             <!-- menu section -->
             <div class="offcanvas offcanvas-start w-75" id="demo">
                 <div class="offcanvas-header">
@@ -61,14 +69,14 @@
 
                     <a href="#" class="categories-toggle">
                         <i class="fa fa-database" aria-hidden="true"></i> Categories
-                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i> <!-- السهم -->
+                        <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i>
                     </a>
 
 
                     <div class="categories-content">
                         <a href="">Photography Lighting</a>
                         <a href="">Microphones</a>
-                        <a href="">Cameras</a>
+                        <a href="product-details.html">Cameras</a>
                         <a href="">Lenses</a>
                         <a href="">Flashes</a>
                         <a href="">Memory Cards</a>
@@ -154,7 +162,7 @@
 
             <!-- Logo Section -->
             <div class="align-items-center logo-section">
-                <img src="image/header/AnyConv.com__logo%20(1).webp" alt="Logo" class="me-2" width="175" height="75"
+                <img src="image/header/AnyConv.com__logo%20(1).webp" alt="Logo" class="me-2" width="150" height="63"
                     loading="lazy" />
             </div>
             <div class="align-items-center logo-sec">
@@ -169,12 +177,16 @@
             </div>
 
             <!-- Navigation Icons -->
-            <div class="d-flex align-items-center gap-5 navigation-icons">
-                <img src="image/header/AnyConv.com__dealZone.webp" alt="zone" width="30" height="27" loading="lazy">
-                <span>
-                    <img src="image/header/AnyConv.com__flag.webp" alt="Flag" width="30" height="20" loading="lazy" />
-                </span>
-                <div>
+            <div class=" deal-logos d-flex align-items-center navigation-icons ">
+                <img class="deal-zone" src="image/gaenral/dealzone_LE_auto_x2.jpg" alt="zone" width="100" height="50"
+                    loading="lazy">
+
+
+                <a href=""><img class="masr" src="image/gaenral/mas3.png" alt="Flag" width="70" height="74"
+                        loading="lazy" /></a>
+
+
+                <div class="icon-bar">
                     <a href="#" class="text-dark"><i class="fa fa-shopping-cart icon-haed"></i></a>
                     <a href="#" class="text-dark"><i class="fa fa-heart icon-haed"></i></a>
                     <a href="#" class="text-dark"><i class="fa fa-user icon-haed"></i></a>
@@ -185,11 +197,11 @@
 
     <!-- start nav-bar  -->
     <nav class="navbar navbar-expand-sm container-fluid   ">
-        <div class="container ">
+        <div class="container  ">
             <div class="collapse navbar-collapse" id="collapsibleNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="index.html">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
@@ -201,7 +213,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CAMERAS
+                        <a class="nav-link" href="product-details.html">CAMERAS
                         </a>
                     </li>
                     <li class="nav-item">
@@ -223,9 +235,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">PHOTOGRAPHY BAGS
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">MORE</a>
@@ -253,49 +262,485 @@
     </nav>
     <!-- end nav-bar  -->
     <!-- end header  -->
-     <!--  start product-details-->
+    <!--  start product-details-->
     <div class="product-details">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-sm-12">
-                    <p class="product-title"> Hyundai MOLES G60 Bi-Color Pocket COB Moonlight </p>
-                    <div class="product-images">
+                    <p class="product-title-image mt-4 ">Zhiyun MOLUS G60 Bi-Color Pocket COB Monolight</p>
+                    <div class="product-images-details">
                         <div class="row">
                             <div class="col-md-2 text-center">
-                                <div class="vertical-swiper" style="overflow: hidden;">
+                                <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+                                <div class="swiper-container" style="overflow: hidden;">
                                     <!-- Additional required wrapper -->
-                                    <div class="vertical-swiper-wrapper">
+                                    <div class="swiper-wrapper swiper-logo-details">
                                         <!-- Slides -->
-                                        <a href="#" class="vertical-swiper-slide">
-                                            <img src="./image/tab-list/642d803121d61_1673264728_1744242.webp"
-                                                 alt="PHOTOGRAPHY LIGHTING" class="new-vertical-swiper" loading="lazy" width="50" height="50">
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
                                         </a>
-                                        <a href="#" class="vertical-swiper-slide">
-                                            <img src="./image/tab-list/642d803121d61_1673264728_1744242.webp"
-                                                 alt="PHOTOGRAPHY LIGHTING" class="new-vertical-swiper" loading="lazy" width="50" height="50">
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
                                         </a>
-                                        <!-- Repeat the rest of the slides similarly -->
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12631/6609500fc6bc6_1679302361_IMG_1943760.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12631/6609500fc6bc6_1679302361_IMG_1943760.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12632/6609501232067_1679302361_IMG_1943761.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12632/6609501232067_1679302361_IMG_1943761.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12632/6609501232067_1679302361_IMG_1943761.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12632/6609501232067_1679302361_IMG_1943761.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12633/66095015295e7_1679302361_IMG_1943762.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12633/66095015295e7_1679302361_IMG_1943762.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12630/6609500d8f4af_1679302361_IMG_1943759.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12635/6609501a19387_1679302361_IMG_1943764.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12635/6609501a19387_1679302361_IMG_1943764.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12639/660950286ea7c_1679302361_IMG_1943779.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12639/660950286ea7c_1679302361_IMG_1943779.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+                                        <a href="#" class="swiper-slide"
+                                            onclick="changeImage('https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg')">
+                                            <img src="https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg"
+                                                alt="PHOTOGRAPHY LIGHTING" class="new-swiper-details" loading="lazy"
+                                                width="50" height="50">
+                                        </a>
+
                                     </div>
                                 </div>
-
-
+                                <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
                             </div>
-                            <div class="col-md-10">
-                                <div class="image-block">
-                                    <img src="" alt="image-block">
+                            <div class="img-container" style="width: 300px; height: 300px;">
+                                <img id="image"
+                                    src="https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg"
+                                    alt="Product" style="width: 100%;">
+
+                                <div id="lens" class="lens"></div>
+
+
+                                <div class="zoom-result" id="zoomResult" style="display: none;">
+                                    <img id="zoomedImage"
+                                        src="https://olbac.com/olbac-website/public/storage/12629/660950093ea4b_1679301964_1752170.jpg">
                                 </div>
+                            </div>
+
+                            <script>
+                                const image = document.getElementById("image");
+                                const lens = document.getElementById("lens");
+                                const zoomResult = document.getElementById("zoomResult");
+                                const zoomedImage = document.getElementById("zoomedImage");
+
+                                image.addEventListener("mousemove", moveLens);
+                                lens.addEventListener("mousemove", moveLens);
+                                image.addEventListener("mouseleave", function () {
+                                    lens.style.display = "none";
+                                    zoomResult.style.display = "none";
+                                });
+
+                                function moveLens(e) {
+                                    lens.style.display = "block";
+                                    zoomResult.style.display = "block";
+
+                                    const pos = getCursorPos(e);
+                                    let x = pos.x - (lens.offsetWidth / 2);
+                                    let y = pos.y - (lens.offsetHeight / 2);
+
+                                    if (x > image.width - lens.offsetWidth) x = image.width - lens.offsetWidth;
+                                    if (x < 0) x = 0;
+                                    if (y > image.height - lens.offsetHeight) y = image.height - lens.offsetHeight;
+                                    if (y < 0) y = 0;
+
+                                    lens.style.left = x + "px";
+                                    lens.style.top = y + "px";
+
+                                    zoomedImage.style.left = -(x * 2) + "px";
+                                    zoomedImage.style.top = -(y * 2) + "px";
+                                }
+
+
+                                function getCursorPos(e) {
+                                    const rect = image.getBoundingClientRect();
+                                    const x = e.pageX - rect.left - window.pageXOffset;
+                                    const y = e.pageY - rect.top - window.pageYOffset;
+                                    return { x: x, y: y };
+                                }
+                                image.addEventListener("mouseleave", hideLensAndZoom);
+                                lens.addEventListener("mouseleave", hideLensAndZoom);
+
+                                function hideLensAndZoom() {
+                                    lens.style.display = "none";
+                                    zoomResult.style.display = "none";
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 ">
+                    <div class="product-info">
+                        <div class="spacial-share d-flex align-items-center justify-content-between ">
+                            <div>
+                                <img src="https://olbac.com/olbac-website/public/storage/15/622a13f319e4d_ZHIYUN.jpg"
+                                    alt="zhiyun" width="130" height="90">
+                            </div>
+                            <div class="icon-add-card">
+                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="price-offer">
+                                    <p class="total-price">12,499 EGP</p>
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="rate-product">
+                                    <i class="fa fa-star stars-icon "></i>
+                                    <i class="fa fa-star stars-icon "></i>
+                                    <i class="fa fa-star stars-icon "></i>
+                                    <i class="fa fa-star stars-icon "></i>
+                                    <i class="fa fa-star stars-icon "></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="available mt-2"> <span>Shipping 2-5 days based on area</span>
+                            <p class="text-bold text-success">
+                                <img src="https://olbac.com/assets/website/images/order/freee_shipping_en.png"
+                                    alt="free" width="200" height="40">
+                            </p>
+                        </div>
+                        <div class="memory-card">
+                            <div class="memory-name">
+                                <p>Capacity</p>
+                            </div>
+                            <div class="memory-num">
+                                <p class="active">64 GM</p>
+                                <p class="gb128">128 GB</p>
+                            </div>
+                            <div class="mt-2 mb-4">
+                                <div class="swiper-add" style=" overflow: hidden;">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Slides -->
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color active"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                        <a href="#" class="swiper-slide">
+                                            <div class="product-color"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- new line -->
+                        <div class="buy-price">
+                            <div class="add">
+                                <button class="add-to"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add To
+                                    Cart</button>
+                                <button class="wish-list"><i class="fa fa-heart-o" aria-hidden="true"></i>Add To Wish
+                                    list</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-12 col-xs-12 "></div>
-
             </div>
         </div>
     </div>
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Details</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Product
+                    Video</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false"> Warranty</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <p>Details</p>
+                <p>Ideal for studio, film, TV, and especially location shooting, the 3.57 x 2.6 x 2.6" MOLUS G60 Pocket
+                    COB Monolight from Zhiyun has COB LEDs and boasts a host of professional features in a very small
+                    package. The G60 has a wide variable color
+                    range of 2700 to 6500K with high CRI/TLCI 96/97 ratings and dims from 0 to 100%. Color and
+                    brightness
+                    can be adjusted on the fixture, but you can also make changes wirelessly using Zhiyun's app.</p>
+                <p>
+                    The G60 includes a multi-voltage AC adapter, power adapter organizer bag, and reflector. With the
+                    purchase of an optional USB-C charging cable, you can use PD technology to quickly power an optional
+                    attached battery for wireless use.
+                </p>
+                <p>Zhiyun MOLUS G60 Mini/Pocket COB Light</p>
+                <p>The MOLUS G60 has 60W of power output supported by innovative cooling technology while serving as a
+                    universal film light.</p>
+                <p>Pro Lighting within Your Hand</p>
+                <p>Weighing only 10.6 oz and as small as a Rubik's Cube, the G60 brings you a brand-new lighting
+                    experience without cumbersome burdens.</p>
 
+            </div>
+            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                <iframe src="https://www.youtube.com/embed/_8ul_JORgds" title="اعلان تجاري لمنتج - كاميرا سوني a6600"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                <p>14-day return and replacement guarantee against manufacturing defects, and a total warranty 12 months
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+    <!--    start sandisk swiper -->
+    <div class=" sandisk container">
+        <div class="swiper-logo  " style=" overflow: hidden;">
+            <hr>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a13387d41a_Fancier-.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12bd4ce5f_BOYA.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a1389d95f9_LEXAR.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a><a href="#" class="swiper-slide">
+                    <img src="./image/sandisk/622a12a299dab_SANDISK.webp" alt="PHOTOGRAPHY LIGHTING" class="sw-logo"
+                        loading="lazy">
+                </a>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="subscribe">
+            <div class=" img-sub">
+                <div class="main-footer">
+
+                    <div>
+                        <h4>Olbac</h4>
+                        <p>You can contact</p>
+
+                        <p> 010123456789 , 010654589752 </p>
+
+                        <address>
+                            address :- <br>
+                            Administration only: 1 General Street, <br> Corniche Al-Warraq,next to the ring road
+                        </address>
+                        <div class="icon-footer">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="fast-links">
+                        <h5>Fast Links</h5>
+                        <a href="">About Us</a>
+                        <a href="">Privacy</a>
+                        <a href="">Terms & Conditions</a>
+                        <a href="">Contact Us</a>
+                        <a href="">Refund Privacy</a>
+                        <a href="">Contact as A Brand Or <br> Seller</a>
+                    </div>
+                    <div class="fast-links">
+                        <h5>News Letter</h5>
+                        <a href="">Login Now !</a>
+                        <a href="">New Account</a>
+                        <a href="">Favourites</a>
+                        <a href="">Cart</a>
+                        <a href="">Careers</a>
+                    </div>
+                    <div class="fast-links">
+                        <h5>Customer</h5>
+                        <p>Subscribe to get our recent products</p>
+                        <div class="email-container">
+                            <label>
+                                <input type="email" placeholder="Enter Your Email">
+                            </label>
+                            <button type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-footer">
+            <div class="third-footer">
+                <div class="reserved">
+                    <div class="powered">
+                        <h5>Copyrights Reserved © <span> OLBAC </span>2024</h5>
+                        <p>Powered By Paymac.net</p>
+                    </div>
+                    <h5 class="General">This Website Following General Photographic Industry
+                        <img src="./image/Footer/logoweb400.webp" alt="2020" width="130" height="30">
+                    </h5>
+                </div>
+                <div class="footer-logo">
+                    <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" alt="v-cash" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="meza" width="50"
+                            height="17" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="Maestro" width="50"
+                            height="30" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="fawry" width="50"
+                            height="17" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="visa" width="50"
+                            height="30" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="we-pay" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="meza" width="50" height="30"
+                            loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <!--    end product-details-->
-
     <script src="./src/main.js"></script>
 
 </body>
