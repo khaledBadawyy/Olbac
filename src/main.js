@@ -1,50 +1,3 @@
-const image = document.getElementById("image");
-const lens = document.getElementById("lens");
-const zoomResult = document.getElementById("zoomResult");
-const zoomedImage = document.getElementById("zoomedImage");
-
-image.addEventListener("mousemove", moveLens);
-lens.addEventListener("mousemove", moveLens);
-image.addEventListener("mouseleave", function () {
-  lens.style.display = "none";
-  zoomResult.style.display = "none";
-});
-
-function moveLens(e) {
-  lens.style.display = "block";
-  zoomResult.style.display = "block";
-
-  const pos = getCursorPos(e);
-  let x = pos.x - lens.offsetWidth / 2;
-  let y = pos.y - lens.offsetHeight / 2;
-
-  if (x > image.width - lens.offsetWidth) x = image.width - lens.offsetWidth;
-  if (x < 0) x = 0;
-  if (y > image.height - lens.offsetHeight)
-    y = image.height - lens.offsetHeight;
-  if (y < 0) y = 0;
-
-  lens.style.left = x + "px";
-  lens.style.top = y + "px";
-
-  zoomedImage.style.left = -(x * 2) + "px";
-  zoomedImage.style.top = -(y * 2) + "px";
-}
-
-function getCursorPos(e) {
-  const rect = image.getBoundingClientRect();
-  const x = e.pageX - rect.left - window.pageXOffset;
-  const y = e.pageY - rect.top - window.pageYOffset;
-  return { x: x, y: y };
-}
-image.addEventListener("mouseleave", hideLensAndZoom);
-lens.addEventListener("mouseleave", hideLensAndZoom);
-
-function hideLensAndZoom() {
-  lens.style.display = "none";
-  zoomResult.style.display = "none";
-}
-
 swiper = new Swiper(".swiper", {
   loop: true,
   pagination: {
@@ -215,11 +168,58 @@ swiper = new Swiper(".mobile-swiper", {
     spaceBetween: 500,
   },
 
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 });
+
+const image = document.getElementById("image");
+const lens = document.getElementById("lens");
+const zoomResult = document.getElementById("zoomResult");
+const zoomedImage = document.getElementById("zoomedImage");
+
+image.addEventListener("mousemove", moveLens);
+lens.addEventListener("mousemove", moveLens);
+image.addEventListener("mouseleave", function () {
+  lens.style.display = "none";
+  zoomResult.style.display = "none";
+});
+
+function moveLens(e) {
+  lens.style.display = "block";
+  zoomResult.style.display = "block";
+
+  const pos = getCursorPos(e);
+  let x = pos.x - lens.offsetWidth / 2;
+  let y = pos.y - lens.offsetHeight / 2;
+
+  if (x > image.width - lens.offsetWidth) x = image.width - lens.offsetWidth;
+  if (x < 0) x = 0;
+  if (y > image.height - lens.offsetHeight)
+    y = image.height - lens.offsetHeight;
+  if (y < 0) y = 0;
+
+  lens.style.left = x + "px";
+  lens.style.top = y + "px";
+
+  zoomedImage.style.left = -(x * 2) + "px";
+  zoomedImage.style.top = -(y * 2) + "px";
+}
+
+function getCursorPos(e) {
+  const rect = image.getBoundingClientRect();
+  const x = e.pageX - rect.left - window.pageXOffset;
+  const y = e.pageY - rect.top - window.pageYOffset;
+  return { x: x, y: y };
+}
+image.addEventListener("mouseleave", hideLensAndZoom);
+lens.addEventListener("mouseleave", hideLensAndZoom);
+
+function hideLensAndZoom() {
+  lens.style.display = "none";
+  zoomResult.style.display = "none";
+}
 
 document
   .querySelector(".categories-toggle")
