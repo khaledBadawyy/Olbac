@@ -173,104 +173,82 @@ swiper = new Swiper(".mobile-swiper", {
     disableOnInteraction: false,
   },
 });
-
 const image = document.getElementById("image");
 const lens = document.getElementById("lens");
 const zoomResult = document.getElementById("zoomResult");
 const zoomedImage = document.getElementById("zoomedImage");
 
-image.addEventListener("mousemove", moveLens);
-lens.addEventListener("mousemove", moveLens);
-image.addEventListener("mouseleave", function () {
-  lens.style.display = "none";
-  zoomResult.style.display = "none";
-});
+if (image && lens) {
+  image.addEventListener("mousemove", moveLens);
+  lens.addEventListener("mousemove", moveLens);
+  image.addEventListener("mouseleave", hideLensAndZoom);
+  lens.addEventListener("mouseleave", hideLensAndZoom);
 
-function moveLens(e) {
-  lens.style.display = "block";
-  zoomResult.style.display = "block";
+  function moveLens(e) {
+    lens.style.display = "block";
+    zoomResult.style.display = "block";
 
-  const pos = getCursorPos(e);
-  let x = pos.x - lens.offsetWidth / 2;
-  let y = pos.y - lens.offsetHeight / 2;
+    const pos = getCursorPos(e);
+    let x = pos.x - lens.offsetWidth / 2;
+    let y = pos.y - lens.offsetHeight / 2;
 
-  if (x > image.width - lens.offsetWidth) x = image.width - lens.offsetWidth;
-  if (x < 0) x = 0;
-  if (y > image.height - lens.offsetHeight)
-    y = image.height - lens.offsetHeight;
-  if (y < 0) y = 0;
+    if (x > image.width - lens.offsetWidth) x = image.width - lens.offsetWidth;
+    if (x < 0) x = 0;
+    if (y > image.height - lens.offsetHeight)
+      y = image.height - lens.offsetHeight;
+    if (y < 0) y = 0;
 
-  lens.style.left = x + "px";
-  lens.style.top = y + "px";
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    zoomedImage.style.left = -(x * 2) + "px";
+    zoomedImage.style.top = -(y * 2) + "px";
+  }
 
-  zoomedImage.style.left = -(x * 2) + "px";
-  zoomedImage.style.top = -(y * 2) + "px";
+  function getCursorPos(e) {
+    const rect = image.getBoundingClientRect();
+    const x = e.pageX - rect.left - window.pageXOffset;
+    const y = e.pageY - rect.top - window.pageYOffset;
+    return { x: x, y: y };
+  }
+
+  function hideLensAndZoom() {
+    lens.style.display = "none";
+    zoomResult.style.display = "none";
+  }
 }
 
-function getCursorPos(e) {
-  const rect = image.getBoundingClientRect();
-  const x = e.pageX - rect.left - window.pageXOffset;
-  const y = e.pageY - rect.top - window.pageYOffset;
-  return { x: x, y: y };
-}
-image.addEventListener("mouseleave", hideLensAndZoom);
-lens.addEventListener("mouseleave", hideLensAndZoom);
-
-function hideLensAndZoom() {
-  lens.style.display = "none";
-  zoomResult.style.display = "none";
-}
-
-document
-  .querySelector(".categories-toggle")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const content = document.querySelector(".categories-content");
-    content.classList.toggle("show");
-
-    const arrow = this.querySelector(".arrow-icon");
-    arrow.classList.toggle("rotate");
-  });
-
-document
-  .querySelector(".brands-toggle")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const content = document.querySelector(".brands-content");
-    content.classList.toggle("show");
-
-    const arrow = this.querySelector(".arrow-icon");
-    arrow.classList.toggle("rotate");
-  });
-
+// التعامل مع التبديل بين عرض القائمة والشبكة
 const listView = document.getElementById("listView");
 const gridView = document.getElementById("gridView");
 const productContainer = document.getElementById("productContainer");
 
-listView.addEventListener("click", function () {
-  productContainer.classList.remove("grid");
-  productContainer.classList.add("list");
-});
+if (listView && gridView && productContainer) {
+  listView.addEventListener("click", function () {
+    productContainer.classList.remove("grid");
+    productContainer.classList.add("list");
+  });
 
-gridView.addEventListener("click", function () {
-  productContainer.classList.remove("list");
-  productContainer.classList.add("grid");
-});
+  gridView.addEventListener("click", function () {
+    productContainer.classList.remove("list");
+    productContainer.classList.add("grid");
+  });
+}
 
 const listViewButton = document.querySelector(".fa-list");
 const gridViewButton = document.querySelector(".fa-th-large");
 
-listViewButton.addEventListener("click", function () {
-  listViewButton.classList.add("active");
-  gridViewButton.classList.remove("active");
-});
+if (listViewButton && gridViewButton) {
+  listViewButton.addEventListener("click", function () {
+    listViewButton.classList.add("active");
+    gridViewButton.classList.remove("active");
+  });
 
-gridViewButton.addEventListener("click", function () {
-  gridViewButton.classList.add("active");
-  listViewButton.classList.remove("active");
-});
+  gridViewButton.addEventListener("click", function () {
+    gridViewButton.classList.add("active");
+    listViewButton.classList.remove("active");
+  });
+}
+
 function changeView(viewClass) {
   productContainer.className = "";
   productContainer.classList.add(viewClass);
@@ -283,17 +261,24 @@ function changeView(viewClass) {
     }, 300);
   });
 }
-// change image
+
+// تغيير الصورة
 function changeImage(newSrc) {
-  document.getElementById("image").src = newSrc;
-  document.getElementById("zoomedImage").src = newSrc;
+  if (image && zoomedImage) {
+    image.src = newSrc;
+    zoomedImage.src = newSrc;
+  }
 }
 
-// start favorite card
-function toggleFavorite() {
-  const heartIcon = document.getElementById("heartIcon");
-  const wishListIcon = document.getElementById("wishListIcon");
+// التعامل مع المفضلة
+const heartIcon = document.getElementById("heartIcon");
+const wishListIcon = document.getElementById("wishListIcon");
 
+if (heartIcon && wishListIcon) {
+  heartIcon.addEventListener("click", toggleFavorite);
+}
+
+function toggleFavorite() {
   if (heartIcon.classList.contains("fa-heart-o")) {
     heartIcon.classList.remove("fa-heart-o");
     heartIcon.classList.add("fa-heart");
@@ -312,31 +297,24 @@ function toggleFavorite() {
     wishListIcon.style.color = "";
   }
 }
-// end favorite card
-// start toastr
-function showToast() {
-  const toast = document.getElementById("toast");
-  const toastTimer = document.getElementById("toast-timer");
-  toast.style.display = "block";
 
-  // Reset the width of the timer to 100%
-  toastTimer.style.width = "100%";
+// إعداد الـ Toastr
+const toast = document.getElementById("toast");
+const toastTimer = document.getElementById("toast-timer");
 
-  // Reduce the width of the timer over 5 seconds
-  setTimeout(() => {
-    toastTimer.style.transition = "width 5s linear";
-    toastTimer.style.width = "0%";
-  }, 0);
+if (toast && toastTimer) {
+  function showToast() {
+    toast.style.display = "block";
+    toastTimer.style.width = "100%";
+    setTimeout(() => {
+      toastTimer.style.transition = "width 5s linear";
+      toastTimer.style.width = "0%";
+    }, 0);
+    setTimeout(hideToast, 5000);
+  }
 
-  // Hide the toast after 5 seconds
-  setTimeout(hideToast, 5000);
+  function hideToast() {
+    toast.style.display = "none";
+    toastTimer.style.transition = "none";
+  }
 }
-
-function hideToast() {
-  const toast = document.getElementById("toast");
-  const toastTimer = document.getElementById("toast-timer");
-  toast.style.display = "none";
-  toastTimer.style.transition = "none"; // Reset the transition for next use
-}
-
-// end toastr
