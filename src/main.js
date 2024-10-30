@@ -217,7 +217,6 @@ if (image && lens) {
   }
 }
 
-// التعامل مع التبديل بين عرض القائمة والشبكة
 const listView = document.getElementById("listView");
 const gridView = document.getElementById("gridView");
 const productContainer = document.getElementById("productContainer");
@@ -262,7 +261,6 @@ function changeView(viewClass) {
   });
 }
 
-// تغيير الصورة
 function changeImage(newSrc) {
   if (image && zoomedImage) {
     image.src = newSrc;
@@ -270,35 +268,26 @@ function changeImage(newSrc) {
   }
 }
 
-// التعامل مع المفضلة
-const heartIcon = document.getElementById("heartIcon");
-const wishListIcon = document.getElementById("wishListIcon");
+const heartIcons = document.querySelectorAll(".heartIcon");
 
-if (heartIcon && wishListIcon) {
-  heartIcon.addEventListener("click", toggleFavorite);
-}
+heartIcons.forEach((heartIcon) => {
+  heartIcon.addEventListener("click", () => {
+    toggleFavorite(heartIcon);
+  });
+});
 
-function toggleFavorite() {
+function toggleFavorite(heartIcon) {
   if (heartIcon.classList.contains("fa-heart-o")) {
     heartIcon.classList.remove("fa-heart-o");
     heartIcon.classList.add("fa-heart");
     heartIcon.style.color = "red";
-
-    wishListIcon.classList.remove("fa-heart-o");
-    wishListIcon.classList.add("fa-heart");
-    wishListIcon.style.color = "black";
   } else {
     heartIcon.classList.remove("fa-heart");
     heartIcon.classList.add("fa-heart-o");
     heartIcon.style.color = "";
-
-    wishListIcon.classList.remove("fa-heart");
-    wishListIcon.classList.add("fa-heart-o");
-    wishListIcon.style.color = "";
   }
 }
 
-// إعداد الـ Toastr
 const toast = document.getElementById("toast");
 const toastTimer = document.getElementById("toast-timer");
 
