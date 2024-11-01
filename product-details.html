@@ -59,21 +59,20 @@
                         </div>
                         <p class="log-out">OLBAC</p>
                         <img src="./image/header/AnyConv.com__masr.webp" alt="masr" width="20" height="13"
-                            loading="lazy"><span>عربي</span>
+                            loading="lazy">
+                        <span>عربي</span>
                     </div>
                 </div>
-
                 <div class="offcanvas-body">
                     <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
 
-
-                    <a href="#" class="categories-toggle">
+                    <!-- Categories Section -->
+                    <a href="#" class="toggle-content" data-target=".categories-content">
                         <i class="fa fa-database" aria-hidden="true"></i> Categories
                         <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i>
                     </a>
-
-
-                    <div class="categories-content">
+                    <div class="categories-content content-section hidden">
+                        <!-- Content for Categories -->
                         <a href="">Photography Lighting</a>
                         <a href="">Microphones</a>
                         <a href="product-details.html">Cameras</a>
@@ -96,13 +95,12 @@
                         <a href="">Accessories</a>
                     </div>
 
-                    <a href="#" class="brands-toggle">
+                    <!-- Brands Section -->
+                    <a href="#" class="toggle-content" data-target=".brands-content">
                         <i class="fa fa-database" aria-hidden="true"></i> Brands
                         <i class="fa fa-chevron-down arrow-icon" aria-hidden="true"></i>
                     </a>
-
-
-                    <div class="brands-content">
+                    <div class="brands-content content-section hidden">
                         <a href="#">Sandisk</a>
                         <a href="#">Boya</a>
                         <a href="#">Cameloin</a>
@@ -136,14 +134,12 @@
                         <a href="#">nanlite</a>
                         <a href="#">vidico</a>
                         <a href="#">yongnuo</a>
-
                     </div>
-                    <a href=""><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Contact Us</a>
-                    <a href=""><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Contact Us A Brand Or
-                        Seller</a>
-                    <a href=""><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
-                    <a href=""><i class="fa fa-briefcase" aria-hidden="true"></i> Careers</a>
 
+                    <a href="#"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Contact Us</a>
+                    <a href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
+
+                    <!-- Social Media Icons -->
                     <div class="icon-menu">
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                         <i class="fa fa-instagram" aria-hidden="true"></i>
@@ -153,7 +149,6 @@
                     </div>
                 </div>
             </div>
-
             <div class=" ">
                 <div class="menu-section position-absolute" data-bs-toggle="offcanvas" data-bs-target="#demo">
                     <a href="#" class="te-dark"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
@@ -189,10 +184,10 @@
                 <div class="icon-bar">
                     <button class=" position-relative">
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            1
+                            3
                             <span class="visually-hidden">unread messages</span>
                         </span>
-                        <a href="#" class="text-dark"><i class="fa fa-shopping-cart icon-haed"></i></a>
+                        <a href="cart-shop.html" class="text-dark"><i class="fa fa-shopping-cart icon-haed"></i></a>
                     </button>
 
                     <a href="#" class="text-dark"><i class="fa fa-heart icon-haed"></i></a>
@@ -201,6 +196,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- start nav-bar  -->
     <nav class="navbar navbar-expand-sm container-fluid   ">
@@ -446,6 +442,7 @@
 
                                     <i class="fa fa-heart-o" id="heartIcon" aria-hidden="true"
                                         onclick="toggleFavorite()"></i>
+
                                 </div>
 
                             </div>
@@ -541,7 +538,7 @@
                             <div class="buy-price">
                                 <div class="add">
                                     <button class="add-to" onclick="showToast()">
-                                        <i class="fa fa-cart-plus" aria-hidden="true"></i>Add To Cart
+                                        <i class="fa fa-cart-plus" aria-hidden="true"></i> Add To Cart
                                     </button>
                                     <button class="wish-list" onclick="toggleFavorite()">
                                         <i class="fa fa-heart-o" id="wishListIcon" aria-hidden="true"></i>
@@ -550,7 +547,11 @@
                                 </div>
                             </div>
 
-                            <!-- Toast Notification -->
+                            <script>
+
+
+                            </script>
+
                             <div id="toast" class="toast">
                                 <div class="toast-content">
                                     <i class="fa fa-check" aria-hidden="true"></i>

@@ -35,6 +35,10 @@ body {
 img {
   background-size: cover;
 }
+.d-none {
+  display: none;
+}
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 10px;
@@ -185,11 +189,25 @@ img {
   padding: 30px 21px 13px;
   margin: auto;
 }
+
+.rotate-icon {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.content-section a {
+  padding-left: 20px;
+  display: block;
+}
 .brands-content,
 .categories-content {
-  max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+  background-color: black;
 }
 .brands-content.show,
 .categories-content.show {

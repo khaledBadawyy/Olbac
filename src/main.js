@@ -173,6 +173,22 @@ swiper = new Swiper(".mobile-swiper", {
     disableOnInteraction: false,
   },
 });
+
+document.querySelectorAll(".toggle-content").forEach((button) => {
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const targetContent = document.querySelector(
+      this.getAttribute("data-target")
+    );
+
+    targetContent.classList.toggle("hidden");
+
+    const icon = this.querySelector(".arrow-icon");
+    icon.classList.toggle("rotate-icon");
+  });
+});
+
 const image = document.getElementById("image");
 const lens = document.getElementById("lens");
 const zoomResult = document.getElementById("zoomResult");
@@ -267,16 +283,10 @@ function changeImage(newSrc) {
     zoomedImage.src = newSrc;
   }
 }
+function toggleFavorite() {
+  const heartIcon = document.getElementById("heartIcon");
+  const wishListIcon = document.getElementById("wishListIcon");
 
-const heartIcons = document.querySelectorAll(".heartIcon");
-
-heartIcons.forEach((heartIcon) => {
-  heartIcon.addEventListener("click", () => {
-    toggleFavorite(heartIcon);
-  });
-});
-
-function toggleFavorite(heartIcon) {
   if (heartIcon.classList.contains("fa-heart-o")) {
     heartIcon.classList.remove("fa-heart-o");
     heartIcon.classList.add("fa-heart");
@@ -285,6 +295,27 @@ function toggleFavorite(heartIcon) {
     heartIcon.classList.remove("fa-heart");
     heartIcon.classList.add("fa-heart-o");
     heartIcon.style.color = "";
+  }
+
+  if (wishListIcon.classList.contains("fa-heart-o")) {
+    wishListIcon.classList.remove("fa-heart-o");
+    wishListIcon.classList.add("fa-heart");
+    wishListIcon.style.color = "black";
+  } else {
+    wishListIcon.classList.remove("fa-heart");
+    wishListIcon.classList.add("fa-heart-o");
+    wishListIcon.style.color = "";
+  }
+}
+function heartIconCart(heartIcon) {
+  if (heartIcon.classList.contains("fa-heart-o")) {
+    heartIcon.classList.remove("fa-heart-o"); // إزالة أيقونة المفضلة غير المحددة
+    heartIcon.classList.add("fa-heart"); // إضافة أيقونة المفضلة المحددة
+    heartIcon.style.color = "red"; // تغيير اللون إلى الأحمر
+  } else {
+    heartIcon.classList.remove("fa-heart"); // إزالة أيقونة المفضلة المحددة
+    heartIcon.classList.add("fa-heart-o"); // إضافة أيقونة المفضلة غير المحددة
+    heartIcon.style.color = ""; // إعادة اللون الافتراضي
   }
 }
 
