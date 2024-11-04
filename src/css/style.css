@@ -1879,9 +1879,10 @@ img {
     display: none;
   }
 }
-.modal {
+.modal-content {
+  width: 94%;
+  margin: auto;
 }
-
 .modal .fa-times {
   background-color: var(--main-color);
   width: fit-content;
@@ -1910,6 +1911,7 @@ img {
 .form-cart {
   display: grid;
   justify-items: center;
+  margin-bottom: 20px;
 }
 .form-cart input {
   width: 87%;
@@ -1929,7 +1931,7 @@ img {
   background-color: var(--main-color);
   color: white;
   width: 87%;
-  padding: 10px 0 10px 0;
+  padding: 4px 0 8px 0;
   border-radius: 5px;
 }
 .form-cart .forget-pass {
@@ -1937,8 +1939,9 @@ img {
   color: var(--main-color);
   margin-left: 286px;
   margin-top: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
+
 .form-cart .login-with {
   text-decoration: none;
   margin-top: 5px;
@@ -1960,7 +1963,30 @@ img {
   padding-left: 4px;
   color: var(--main-color);
 }
+.register-page input {
+  margin-bottom: 20px;
+  padding: 0;
+  border-radius: 7px;
+}
+.register-page .fa-google {
+  margin-left: -384px;
+  font-size: 16px;
+}
+.modal-body-register .modal-title {
+  font-size: 22px;
+  text-align: center;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.register-page p:first-of-type {
+  margin-left: -182px;
+  font-size: 15px;
+  font-family: "Inter Variable";
+}
 
+.register-page p:nth-of-type(2) {
+  font-size: 15px;
+}
 @media (max-width: 768px) {
   .section-cart .container ul li,
   .cart-group {
@@ -2031,6 +2057,12 @@ img {
   }
   .form-cart .forget-pass {
     margin-left: 205px;
+  }
+  .form-cart .fa-google {
+    margin-right: -94px;
+  }
+  .register-page p:first-of-type {
+    margin-right: -88px;
   }
 }
 /*end section cart*/
