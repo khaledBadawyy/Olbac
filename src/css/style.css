@@ -2091,8 +2091,8 @@ img {
     width: 100%;
   }
   .favorite-shop .list .card-style-stand {
-    width: 1000px;
-    height: 170px;
+    width: 900px;
+    height: 157px;
   }
   .favorite-shop .card-product-card:hover .product-icons {
     margin-left: 40px;
@@ -2116,10 +2116,15 @@ img {
   }
   .favorite-shop .list .card-style-stand .price-star-card {
     flex-direction: row-reverse;
+    margin: 0;
   }
   .favorite-shop .list .card-style-stand .product-price-card {
     margin-left: 350px;
     height: 27px;
+  }
+  .favorite-shop .list .card-style-stand .product-image-card {
+    margin-left: 5px;
+    margin-top: 21px;
   }
   .favorite-shop .star-rating-card {
     margin: -11px 0 0 0;
@@ -2132,8 +2137,9 @@ img {
     display: block;
     position: absolute;
     bottom: 19px;
-    left: 32%;
+    left: 26%;
   }
+
   .favorite-shop .list .card-product-card .Fav-icon-card button:first-child {
     margin-right: 30px;
     padding: 5px;
@@ -2161,15 +2167,70 @@ img {
 }
 
 @media (max-width: 768px) {
+  .favorite-shop {
+    margin-bottom: 100px;
+  }
   .favorite-shop .list .card-product-card .Fav-icon-card button:first-child {
     display: none;
   }
   .favorite-shop .card-product-card {
     width: 100%;
+    display: flex;
+    height: 205px;
+    position: relative;
   }
+
   .favorite-shop .card-list-tab {
     padding: 0;
     margin: 0;
+  }
+  .favorite-shop .product-image-card {
+    margin: 23px 55px 0 6px;
+  }
+  .favorite-shop .product-title-card {
+    margin-top: 6px;
+    padding-right: 0px;
+    font-weight: normal;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+  }
+  .favorite-shop .price-star-card {
+    padding: 0;
+  }
+  .favorite-shop .Fav-icon-card button:first-child {
+    display: none;
+  }
+  .favorite-shop .Fav-icon-card {
+    position: absolute;
+    bottom: 10px;
+    left: 4%;
+    width: 95%;
+  }
+  .favorite-shop .Fav-icon-card button:nth-of-type(2) {
+    padding: 0 30px 0 30px;
+    background-color: white;
+    color: #ab0000;
+    font-size: 21px;
+    border: 1px solid;
+    border-radius: 10px;
+  }
+  .favorite-shop .Fav-icon-card button:last-child {
+    margin-left: 10px;
+    background-color: #198754;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 73%;
+    padding-bottom: 3px;
+    padding-top: 5px;
+  }
+  .favorite-shop .Fav-icon-card button:last-child i {
+    background-color: #198754;
+    padding-right: 7px;
+  }
+  .favorite-shop .product-card-stand {
+    height: auto;
   }
 }
 /*end section favorite-shop*/
