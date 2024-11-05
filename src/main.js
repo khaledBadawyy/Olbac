@@ -349,3 +349,29 @@ function confirmDelete(productId) {
     alert("The deletion process has been cancelled.");
   }
 }
+
+// map
+function initMap() {
+  const myLatlng = { lat: 29.978576788059428, lng: 30.935669975032056 };
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: myLatlng,
+  });
+  const marker = new google.maps.Marker({
+    position: myLatlng,
+    map,
+    title: "Click to zoom",
+  });
+
+  map.addListener("center_changed", () => {
+    window.setTimeout(() => {
+      map.panTo(marker.getPosition());
+    }, 3000);
+  });
+  marker.addListener("click", () => {
+    map.setZoom(8);
+    map.setCenter(marker.getPosition());
+  });
+}
+
+window.initMap = initMap;

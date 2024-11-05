@@ -17,11 +17,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alpine lib  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Olbac | Fav</title>
+    <title>Olbac | About-Us</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
-<body class="private">
+<body>
     <!-- start navbar mobile  -->
 
     <!-- start navbar mobile  -->
@@ -263,154 +263,44 @@
     <!-- end nav-bar  -->
     <!-- end header  -->
     <!-- ---------------------------------------------- -->
+    <!-- start About-Us -->
 
-    <div class="filter-head stand-main mt-4">
-        <div class="d-flex">
-            <div class="pt-2">
-                <h3>Favourite</h3>
+
+    <div class="about-us p-5">
+        <h1>Get to know more about OLBAC</h1>
+        <div class="about-us-sections container">
+            <div class="artical-one">
+                <img src="image/gaenral/acDlm1X (1).jpg" alt="acDlm1X">
+                <p>
+
+                    OLBAC is a group of people whose goal is to provide for your needs
+                    And your commitments to the quality and price you want, and it is one of the General Photography
+                    companies in Egypt
+                    OLBAC was established in 2019 and has contracts with the largest selling platforms such as (Amazon,
+                    Noon, B.Tech and Jumia) and it had and still has a single goal, which is to provide your needs with
+                    the best possible quality and price.
+                </p>
             </div>
-        </div>
-        <div class="filter-item">
-            <i class="fa fa-list fa-2x" id="listView" data-class="list"></i>
-            <i class="fa fa-th-large fa-2x active" id="gridView" data-class="grid"></i>
+            <div class="artical-two">
+                <img src="image/gaenral/Y2YOz6J.jpeg" alt="Y2YOz6J">
+                <p>
+                    to be able to satisfy you in terms of material and speed of delivery, a huge range of photographic
+                    requirements must be provided, so Allpack has work contracts and agencies for the most famous brands
+                    in the field of photography such as
+                    (FUJIFILM, Godox, Nanlite, General, SanDisk, Lexar, Boya, ZHIYUN,) and many others.
+                </p>
+            </div>
+            <div class="artical-three">
+                <img src="image/gaenral/bwNi2vm.jpeg" alt="bwNi2vm">
+                <p>
+                    We believe in making customers, not sales. That's why we've perfected the "art of the downsell":
+                    we'll always recommend the best options based on your specific needs, rather than the price tag. The
+                    customer comes first, second and third at OLBAC.
+                </p>
+            </div>
+
         </div>
     </div>
-    <div class="favorite-shop">
-        <div class=" mb-5  product-row-card-stand card-style-tab product-card-stand grid " id="productContainer">
-            <div class="stand-filter">
-                <div class="card-list-tab stand-main-filter ">
-                    <div class="card-product-card card-style-stand bg-white" id="product-1">
-                        <img src="./image/tab-list/dae6.webp" alt="Product Image" class="product-image-card"
-                            loading="lazy">
-                        <div>
-                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12</div>
-                            <div class="price-star-card">
-                                <div class="product-price-card">599 EGP</div>
-                                <div class="star-rating-card">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                            </div>
-                            <div class="product-icons">
-                                <i class="fa fa-cart-plus" aria-hidden="true" onclick="showToast()"></i>
-                                <i class="fa fa-trash-o" onclick="confirmDelete('product-1')" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="Fav-icon-card">
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i> Remove</button>
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" onclick="showToast()"><i class="fa fa-cart-plus"
-                                        aria-hidden="true"></i> Add To cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-product-card card-style-stand bg-white" id="product-1">
-                        <img src="./image/tab-list/66c5cac38854f_715lqkkaWNL._AC_SL1500_.webp" alt="Product Image"
-                            class="product-image-card" loading="lazy">
-                        <div>
-                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12</div>
-                            <div class="price-star-card">
-                                <div class="product-price-card">599 EGP</div>
-                                <div class="star-rating-card">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                            </div>
-                            <div class="product-icons">
-                                <i class="fa fa-cart-plus" aria-hidden="true" onclick="showToast()"></i>
-                                <i class="fa fa-trash-o" onclick="confirmDelete('product-1')" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="Fav-icon-card">
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i> Remove</button>
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" onclick="showToast()"><i class="fa fa-cart-plus"
-                                        aria-hidden="true"></i> Add To cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-product-card card-style-stand bg-white" id="product-1">
-                        <img src="./image/tab-list/miceo.webp" alt="Product Image" class="product-image-card"
-                            loading="lazy">
-                        <div>
-                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12</div>
-                            <div class="price-star-card">
-                                <div class="product-price-card">599 EGP</div>
-                                <div class="star-rating-card">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                            </div>
-                            <div class="product-icons">
-                                <i class="fa fa-cart-plus" aria-hidden="true" onclick="showToast()"></i>
-                                <i class="fa fa-trash-o" onclick="confirmDelete('product-1')" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="Fav-icon-card">
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i> Remove</button>
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" onclick="showToast()"><i class="fa fa-cart-plus"
-                                        aria-hidden="true"></i> Add To cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-product-card card-style-stand bg-white" id="product-1">
-                        <img src="image/gaenral/61.webp" alt="Product Image" class="product-image-card" loading="lazy">
-                        <div>
-                            <div class="product-title-card">TPA-1Kit Tripod With Mobile Clamp With Led12</div>
-                            <div class="price-star-card">
-                                <div class="product-price-card">599 EGP</div>
-                                <div class="star-rating-card">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                            </div>
-                            <div class="product-icons">
-                                <i class="fa fa-cart-plus" aria-hidden="true" onclick="showToast()"></i>
-                                <i class="fa fa-trash-o" onclick="confirmDelete('product-1')" aria-hidden="true"></i>
-                            </div>
-
-                            <div class="Fav-icon-card">
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i> Remove</button>
-                                <button type="button" onclick="confirmDelete('product-1')"><i class="fa fa-trash"
-                                        aria-hidden="true"></i></button>
-                                <button type="button" onclick="showToast()"><i class="fa fa-cart-plus"
-                                        aria-hidden="true"></i> Add To cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="toast" class="toast">
-                        <div class="toast-content">
-                            <i class="fa fa-check" aria-hidden="true"></i>
-                            Added Successfully
-                            <span class="close-btn" onclick="hideToast()">&times;</span>
-                        </div>
-                        <div class="toast-timer" id="toast-timer"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- start modal  -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -478,14 +368,18 @@
             </div>
         </div>
     </div>
-    <footer class="footer mt-3">
+
+    <footer class="footer">
         <div class="subscribe">
             <div class=" img-sub">
                 <div class="main-footer">
+
                     <div>
                         <h4>Olbac</h4>
                         <p>You can contact</p>
+
                         <p> 010123456789 , 010654589752 </p>
+
                         <address>
                             address :- <br>
                             Administration only: 1 General Street, <br> Corniche Al-Warraq,next to the ring road
@@ -503,7 +397,7 @@
                         <a href="About-Us.html">About Us</a>
                         <a href="">Privacy</a>
                         <a href="">Terms & Conditions</a>
-                        <a href="Contact-Us.html">Contact Us</a>
+                        <a href="">Contact Us</a>
                         <a href="">Refund Privacy</a>
                         <a href="">Contact as A Brand Or <br> Seller</a>
                     </div>
@@ -561,6 +455,10 @@
         </div>
     </footer>
 
+
+
+
+    <!-- end About-Us -->
     <script src="./src/main.js"></script>
 </body>
 
