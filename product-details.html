@@ -191,7 +191,8 @@
                     </button>
 
                     <a href="favorite-shop.html" class="text-dark"><i class="fa fa-heart icon-haed"></i></a>
-                    <a href="#" class="text-dark"><i class="fa fa-user icon-haed"></i></a>
+                    <a href="#" class="text-dark" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><i
+                            class="fa fa-user icon-haed"></i></a>
                 </div>
             </div>
         </div>
@@ -694,6 +695,72 @@
                 </a>
             </div>
             <hr>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body">
+                    <h1 class="modal-title" id="exampleModalLabel">Welcome Back!</h1>
+                    <p>Sign Up By Entering These Data</p>
+                </div>
+                <div class="form-cart">
+                    <input type="email" placeholder=" Email ">
+                    <input type="password" placeholder=" Password ">
+                    <button type="button">Login</button>
+                    <a href="#" class="forget-pass" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Forgot
+                        Password?</a>
+                    <a href="#" class="login-with">Login With</a>
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <p class="any-mail" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"> Dont
+                        Hav Any Account?<a href="#" class="register-now">Register
+                            Now!</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body-register">
+                    <h1 class="modal-title ">Register With</h1>
+                </div>
+                <div class="form-cart register-page ">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <p>Sign Up By Entering These Data</p>
+
+                    <input type="name" placeholder=" name ">
+                    <input type="email" placeholder=" email ">
+                    <input type="number" placeholder=" phone">
+                    <input type="password" placeholder=" password ">
+                    <input type="password" placeholder=" Retype Password ">
+                    <button type="button">Register</button>
+                    <p class="any-mail">Already have an account?<a href="#" class="register-now"
+                            data-bs-target="#exampleModal" data-bs-toggle="modal"> Login
+                            Now</a> </p </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle3" aria-labelledby="exampleModalToggleLabel3" tabindex="-1"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body">
+                    <h1 class="modal-title ">Forget Password</h1>
+                    <p> Pleas Enter Your Email To Change your Password</p>
+                </div>
+                <div class="form-cart">
+                    <input type="email" placeholder=" Email Address ">
+                    <button type="button">Send</button>
+                </div>
+            </div>
         </div>
     </div>
 
