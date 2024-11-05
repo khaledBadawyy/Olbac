@@ -309,13 +309,12 @@ function toggleFavorite() {
 }
 function heartIconCart(heartIcon) {
   if (heartIcon.classList.contains("fa-heart-o")) {
-    heartIcon.classList.remove("fa-heart-o"); // إزالة أيقونة المفضلة غير المحددة
-    heartIcon.classList.add("fa-heart"); // إضافة أيقونة المفضلة المحددة
-    heartIcon.style.color = "red"; // تغيير اللون إلى الأحمر
-  } else {
-    heartIcon.classList.remove("fa-heart"); // إزالة أيقونة المفضلة المحددة
-    heartIcon.classList.add("fa-heart-o"); // إضافة أيقونة المفضلة غير المحددة
-    heartIcon.style.color = ""; // إعادة اللون الافتراضي
+    heartIcon.classList.remove("fa-heart-o");
+    heartIcon.classList.add("fa-heart");
+    heartIcon.style.color = "red";
+    heartIcon.classList.remove("fa-heart");
+    heartIcon.classList.add("fa-heart-o");
+    heartIcon.style.color = "";
   }
 }
 
@@ -336,5 +335,17 @@ if (toast && toastTimer) {
   function hideToast() {
     toast.style.display = "none";
     toastTimer.style.transition = "none";
+  }
+}
+
+// start delete product
+function confirmDelete(productId) {
+  const confirmation = confirm("Are you sure you want to delete this product?");
+  if (confirmation) {
+    const productElement = document.getElementById(productId);
+    productElement.remove();
+    alert("Product has been successfully deleted!");
+  } else {
+    alert("The deletion process has been cancelled.");
   }
 }

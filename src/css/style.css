@@ -2168,7 +2168,7 @@ img {
 
 @media (max-width: 768px) {
   .favorite-shop {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .favorite-shop .list .card-product-card .Fav-icon-card button:first-child {
     display: none;
