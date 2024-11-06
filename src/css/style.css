@@ -301,6 +301,7 @@ img {
   }
   .deal-logos a {
     text-align: center;
+    padding-right: 7px;
   }
   .deal-logos a i {
     border-radius: 50%;
@@ -313,6 +314,7 @@ img {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   }
   .icon-bar {
+    display: flex;
     margin-left: 20px;
   }
 
@@ -395,6 +397,7 @@ img {
     left: 10px;
     font-size: 25px;
   }
+
   .navbars .fa-minus:before {
     content: "\f068";
     position: absolute;
@@ -756,7 +759,6 @@ img {
     margin-left: -36px;
   }
   .navbar {
-    margin-left: -86px;
     padding-right: 6px;
   }
   .sandisk {
@@ -2463,3 +2465,85 @@ img {
   }
 }
 /* end   career  */
+
+/* start commers   */
+.commerce-page {
+}
+.commerce-page .form-commerce {
+}
+.commerce-page .form-commerce h1 {
+  margin-top: 65px;
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 36px;
+}
+.commerce-page .form-commerce p {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 27px;
+  padding-top: 42px;
+  margin-bottom: -67px;
+}
+.commerce-page .group-form label {
+  font-size: 20px;
+}
+.commerce-page .group-form textarea {
+  resize: auto;
+  height: 100px;
+}
+
+.commerce-page .social-commerce {
+  background-color: var(--job-color);
+  padding: 25px 0 1px 35px;
+  margin-top: 30px;
+  margin-left: 10px;
+  border-radius: 9px;
+}
+.commerce-page .social-commerce h1 {
+  font-family: monospace;
+  color: var(--main-color);
+  font-size: 33px;
+  letter-spacing: -2px;
+}
+.commerce-page .social-commerce .social-contact {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.commerce-page .social-commerce .fa-facebook,
+.fa-twitter,
+.fa-whatsapp {
+  color: var(--main-color);
+  font-size: 25px;
+  padding-right: 28px;
+}
+.commerce-page .social-commerce .fa-plus {
+  font-size: 25px;
+  background-color: var(--main-color);
+  color: white;
+  padding: 6px 8px 4px 8px;
+  border-radius: 5px;
+}
+
+.commerce-info {
+}
+.commerce-info h1 {
+  color: var(--main-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.commerce-info p {
+  font-weight: bold;
+  margin-bottom: 80px;
+  padding-left: 25px;
+}
+@media (max-width: 768px) {
+  .commerce-page .form-commerce h1 {
+    font-size: 25px;
+  }
+  .commerce-info h1 {
+    font-size: 21px;
+  }
+}
+/* end   commers  */
