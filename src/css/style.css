@@ -9,6 +9,7 @@
 :root {
   --main-color: #007594;
   --cart-color: #c4c4c4;
+  --job-color: #f7f7f7;
 }
 * {
   box-sizing: border-box;
@@ -23,7 +24,7 @@ body {
   font-family: "YourOriginalFont", sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
   height: 20px;
   margin: 0;
 }
@@ -2062,7 +2063,7 @@ img {
   .form-cart .forget-pass {
     margin-left: 205px;
   }
-  .form-cart .fa-google {
+  .register-page .fa-google {
     margin-right: -94px;
   }
   .register-page p:first-of-type {
@@ -2362,3 +2363,104 @@ img {
   margin-bottom: 50px;
 }
 /* end contact-us */
+
+/* start career  */
+.careers {
+}
+.careers .career-img {
+}
+.careers .career-img img {
+  width: 100%;
+  background-size: cover;
+}
+.careers h1 {
+  margin-top: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.jobs-tabs-container {
+  margin-bottom: 25px;
+}
+.jobs-tabs-container .jobs-tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.jobs-tabs-container .jobs-tabs a {
+  background-color: var(--job-color);
+  margin-right: 7px;
+  margin-top: 25px;
+  padding: 10px 20px;
+  border: 1px solid #dfdfdf;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+}
+.jobs-tabs-container .jobs-tabs a:hover {
+  background-color: var(--main-color);
+  color: white;
+}
+.jobs-tabs-container .jobs-tabs a.active {
+  background-color: var(--main-color);
+  color: white;
+}
+.careers .job-card {
+  padding: 20px 0 24px 24px;
+  margin-bottom: 20px;
+  background-color: var(--job-color);
+  border-radius: 10px;
+}
+.careers .job-card:hover {
+  border: 1px solid var(--main-color);
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.careers .job-card-link {
+  text-decoration: none;
+}
+.careers .job-card-link h4 {
+  color: black;
+  font-weight: bold;
+}
+.careers .job-card-link .sales {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.careers .job-card-link .commerce {
+  color: black;
+  font-weight: bold;
+  padding-top: 15px;
+}
+.careers .continue {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-weight: bold;
+  display: flex;
+  justify-content: end;
+  padding-right: 20px;
+}
+.careers .continue:hover {
+  color: black;
+}
+@media (max-width: 768px) {
+  .jobs-container .scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    width: 98%;
+    margin: auto;
+    padding-left: 113px;
+    margin-bottom: 20px;
+    padding-bottom: 3px;
+  }
+
+  .jobs-tabs-container .jobs-tabs a {
+    display: inline-block;
+  }
+  .careers .job-card-link .sales {
+    display: contents;
+  }
+}
+/* end   career  */
