@@ -375,3 +375,16 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+//popup profile
+document
+  .querySelector(".confirm-email")
+  .addEventListener("mouseenter", function () {
+    document.querySelector(".user-modal-info").classList.add("active");
+  });
+
+document
+  .querySelector(".user-modal")
+  .addEventListener("mouseleave", function () {
+    document.querySelector(".user-modal-info").classList.remove("active");
+  });
