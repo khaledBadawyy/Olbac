@@ -60,6 +60,12 @@ img {
 .navbar ul li a {
   color: #fff;
 }
+img.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+}
 .main-haeding::after {
   content: "";
   position: absolute;
@@ -311,6 +317,7 @@ img {
   }
   .icon-haed {
     background-color: var(--main-color);
+
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   }
   .icon-bar {
@@ -1218,6 +1225,11 @@ img {
   display: flex;
   width: 98%;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .stand-main-filter {
+    padding: 0;
+  }
 }
 
 .categories-filter {
@@ -2358,8 +2370,10 @@ img {
 
 .form-contact .icon-addres i {
   padding-right: 5px;
+  font-size: 18px;
+  color: black;
 }
-#map {
+.map {
   height: 500px;
   margin-bottom: 50px;
 }
@@ -2841,3 +2855,194 @@ img {
   }
 }
 /* end profile  */
+/* person-order */
+
+.main-profile-order {
+  width: 99%;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  margin-bottom: 100px;
+}
+
+.main-profile-order .img-info {
+  position: relative;
+  background-color: var(--main-color);
+  height: 50px;
+}
+.main-profile-order .img-info img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -35px;
+  border: 1px solid white;
+  padding: 9px;
+  box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1);
+}
+.main-profile-order .img-info i {
+  position: absolute;
+  bottom: -71px;
+  left: 65px;
+  color: var(--main-color);
+  font-size: 20px;
+  background-color: white;
+}
+.main-profile-order .info-user {
+  margin-top: 70px;
+
+  padding-top: 13px;
+  background-color: white;
+  position: sticky;
+}
+.main-profile-order .info-user p:first-child {
+  color: var(--main-color);
+  font-size: 15px;
+}
+.main-profile-order .info-user p:last-child {
+  font-size: 15px;
+  margin: -13px 65px 45px 0;
+  border-bottom: 1px solid #c9caca;
+}
+.main-profile-order .sub-profile {
+  width: 80%;
+  margin: auto;
+}
+.main-profile-order .main-Settings {
+  border-bottom: 1px solid #c9caca;
+}
+.main-profile-order .main-Settings .Settings p {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.main-profile-order .main-Settings .country {
+  display: flex;
+}
+.main-profile-order .main-Settings .country p {
+  font-size: 15px;
+  padding-left: 20px;
+}
+.main-profile-order .main-Settings .country p i {
+  color: var(--main-color);
+  padding-right: 16px;
+}
+.main-profile-order .main-Settings .country .dropdown button {
+  border: 1px solid white;
+}
+.main-profile-order .main-Settings .country img {
+  margin-left: -12px;
+}
+.main-profile-order .main-Language {
+  border-bottom: 1px solid #c9caca;
+  display: flex;
+  padding-top: 15px;
+}
+.main-profile-order .main-Language p {
+  font-size: 15px;
+  padding-left: 20px;
+}
+.main-profile-order .main-Language p i {
+  color: var(--main-color);
+  padding-right: 16px;
+}
+.main-profile-order .main-Language button {
+  margin-left: -12px;
+}
+.main-profile-order .main-profile-links {
+  display: grid;
+  margin-top: 12px;
+  border-top: 1px solid #c9caca;
+}
+.main-profile-order .main-profile-links a {
+  border-bottom: 1px solid #c9caca;
+  padding: 17px 0 17px 0;
+}
+.main-profile-order .main-profile-links a {
+  color: black;
+  text-decoration: none;
+}
+.main-profile-order .main-profile-links i {
+  color: var(--main-color);
+  padding: 0 14px 0 0;
+}
+.main-profile-order .logout {
+  display: block;
+  margin: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+  padding-bottom: 30px;
+}
+
+.person-order {
+}
+.person-order h3 {
+  font-weight: bold;
+  color: var(--main-color);
+  padding: 40px 178px;
+  border-bottom: 1px solid #c9caca;
+  margin-left: -26px;
+  font-size: 20px;
+}
+.shop-order {
+  position: relative;
+  margin: 136px 275px;
+}
+
+.person-order .shop-now {
+  padding: 8px 100px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .person-order {
+    margin-top: -50px;
+    margin-bottom: -83px;
+  }
+  .shop-order {
+  }
+  .person-order .shop-now {
+    margin: -145px;
+    padding: 12px 23px;
+  }
+  .person-order h3 {
+    padding: 0;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+/* person-order */
+
+/* scroll button  */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  padding: 10px 16px;
+  font-size: 18px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 100;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #748a91;
+}
+
+@media (max-width: 768px) {
+  #scrollToTopBtn {
+    bottom: 70px;
+  }
+  #scrollToTopBtn:hover {
+    background-color: var(--main-color);
+  }
+}

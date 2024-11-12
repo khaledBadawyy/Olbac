@@ -17,18 +17,22 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alpine lib  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- drop-zone  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
+
     <title>Olbac | Profile</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
     <!-- start navbar mobile  -->
-
+    <button id="scrollToTopBtn" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     <!-- start navbar mobile  -->
     <div class="navbars ">
-        <a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
-        <a href="#"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
-        <a href="#"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a href="index-stands.html"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
+        <a href="profile.html" class="active"><i class="fa fa-user" aria-hidden="true"></i> My Account</a>
         <a href="favorite-shop.html"> <i class="fa fa-star-o roud1" aria-hidden="true"></i>Favourites</a>
         <a href="cart-shop.html"> <i class="fa fa-cart-arrow-down roud2" aria-hidden="true"></i>Cart</a>
     </div>
@@ -192,7 +196,11 @@
                     <div class="user-modal position-relative">
                         <a href="#" class="text-dark confirm-email" data-bs-target="#exampleModalToggle2"
                             data-bs-toggle="modal">
-                            <i class="fa fa-user icon-haed"></i>
+                            <img src="image/gaenral/nmed.jpg" alt="" srcset="" class="user-img">
+                            <i class="fa fa-user icon-haed">
+
+
+                            </i>
                         </a>
 
                         <ul class="user-modal-info">
@@ -201,12 +209,13 @@
                             </div>
                             <div class="img-popup">
                                 <img src="image/gaenral/nmed.jpg" alt="named" height="100" width="100">
-                                <a href=""> Khaled E_lbeah</a>
+                                <a href="profile.html"> Khaled E_lbeah</a>
                             </div>
                             <div class="popup-links">
                                 <div class="links">
 
-                                    <li><a href="#"> <i class="fa fa-shopping-cart" aria-hidden="true"></i>My Orders</a>
+                                    <li><a href="My-orders.html"> <i class="fa fa-shopping-cart"
+                                                aria-hidden="true"></i>My Orders</a>
                                     </li>
                                     <li><a href="About-Us.html"><i class="fa fa-info-circle"
                                                 aria-hidden="true"></i>About Us</a>
@@ -304,11 +313,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 col-lg-4">
-                    <di class="main-profile">
-                        <div class="img-info">
-                            <img src="image/gaenral/nmed.jpg" alt="">
+                    <div class="main-profile">
+                        <div class="img-info" data-bs-toggle="modal" data-bs-target="#uploadModal">
+                            <img id="profileImage" src="image/gaenral/nmed.jpg" alt="">
                             <i class="fa fa-picture-o" aria-hidden="true"></i>
+                        </div>
 
+
+                        <!-- Bootstrap Modal -->
+                        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="uploadModalLabel">Upload Profile Picture</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="myDropzone" class="dropzone" action="/upload">
+                                            <div class="dz-message">Drag & drop a picture here or click to upload</div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="sub-profile">
                             <div class="info-user">
@@ -346,16 +378,17 @@
                             </div>
                             <div class="main-profile-links">
                                 <a href="favorite-shop.html"><i class="fa fa-heart" aria-hidden="true"></i>Favourite</a>
-                                <a href=" "><i class="fa fa-first-order" aria-hidden="true"></i>My Orders</a>
+                                <a href="My-orders.html"><i class="fa fa-first-order" aria-hidden="true"></i>My
+                                    Orders</a>
                                 <a href="cart-shop.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
                                     Basket</a>
-                                <a href=" "><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                <a href="help.html"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                     Help</a>
                             </div>
                             <a href=" " class="logout"> Logout</a>
                         </div>
 
-                    </di>
+                    </div>
                 </div>
                 <div class="col-md-12 col-lg-8">
                     <div class="person-profile">
@@ -409,93 +442,163 @@
                 </div>
             </div>
         </div>
-        < /div>
-            <footer class="footer">
-                <div class="subscribe">
-                    <div class=" img-sub">
-                        <div class="main-footer">
+    </div>
 
-                            <div>
-                                <h4>Olbac</h4>
-                                <p>You can contact</p>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body">
+                    <h1 class="modal-title" id="exampleModalLabel">Welcome Back!</h1>
+                    <p>Sign Up By Entering These Data</p>
+                </div>
+                <div class="form-cart">
+                    <input type="email" placeholder=" Email ">
+                    <input type="password" placeholder=" Password ">
+                    <button type="button">Login</button>
+                    <a href="#" class="forget-pass" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Forgot
+                        Password?</a>
+                    <a href="#" class="login-with">Login With</a>
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <p class="any-mail" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"> Dont
+                        Hav Any Account?<a href="#" class="register-now">Register
+                            Now!</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle2" aria-labelledby="exampleModalToggleLabel2" tabindex="-1"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body-register">
+                    <h1 class="modal-title ">Register With</h1>
+                </div>
+                <div class="form-cart register-page ">
+                    <i class="fa fa-google" aria-hidden="true"></i>
+                    <p>Sign Up By Entering These Data</p>
 
-                                <p> 010123456789 , 010654589752 </p>
+                    <input type="name" placeholder=" name ">
+                    <input type="email" placeholder=" email ">
+                    <input type="number" placeholder=" phone">
+                    <input type="password" placeholder=" password ">
+                    <input type="password" placeholder=" Retype Password ">
+                    <button type="button">Register</button>
+                    <p class="any-mail">Already have an account?<a href="#" class="register-now"
+                            data-bs-target="#exampleModal" data-bs-toggle="modal"> Login
+                            Now</a> </p </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalToggle3" aria-labelledby="exampleModalToggleLabel3" tabindex="-1"
+        style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
 
-                                <address>
-                                    address :- <br>
-                                    Administration only: 1 General Street, <br> Corniche Al-Warraq,next to the ring road
-                                </address>
-                                <div class="icon-footer">
-                                    <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                                    <i class="fa fa-instagram" aria-hidden="true"></i>
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                    <i class="fa fa-youtube-square" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                            <div class="fast-links">
-                                <h5>Fast Links</h5>
-                                <a href="About-Us.html">About Us</a>
-                                <a href="About-Us.html">Privacy</a>
-                                <a href="About-Us.html">Terms & Conditions</a>
-                                <a href="Contact-Us.html">Contact Us</a>
-                                <a href="About-Us.html">Refund Privacy</a>
-                                <a href="Contact-Us.html">Contact as A Brand Or <br> Seller</a>
-                            </div>
-                            <div class="fast-links">
-                                <h5>News Letter</h5>
-                                <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Login Now !</a>
-                                <a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">New Account</a>
-                                <a href="favorite-shop.html">Favourites</a>
-                                <a href="cart-shop.html">Cart</a>
-                                <a href="Careers.html">Careers</a>
-                            </div>
-                            <div class="fast-links">
-                                <h5>Customer</h5>
-                                <p>Subscribe to get our recent products</p>
-                                <div class="email-container">
-                                    <label>
-                                        <input type="email" placeholder="Enter Your Email">
-                                    </label>
-                                    <button type="submit">Send</button>
-                                </div>
-                            </div>
+            <div class="modal-content">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body">
+                    <h1 class="modal-title ">Forget Password</h1>
+                    <p> Pleas Enter Your Email To Change your Password</p>
+                </div>
+                <div class="form-cart">
+                    <input type="email" placeholder=" Email Address ">
+                    <button type="button">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="subscribe">
+            <div class=" img-sub">
+                <div class="main-footer">
+
+                    <div>
+                        <h4>Olbac</h4>
+                        <p>You can contact</p>
+
+                        <p> 010123456789 , 010654589752 </p>
+
+                        <address>
+                            address :- <br>
+                            Administration only: 1 General Street, <br> Corniche Al-Warraq,next to the ring road
+                        </address>
+                        <div class="icon-footer">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="fast-links">
+                        <h5>Fast Links</h5>
+                        <a href="About-Us.html">About Us</a>
+                        <a href="About-Us.html">Privacy</a>
+                        <a href="About-Us.html">Terms & Conditions</a>
+                        <a href="Contact-Us.html">Contact Us</a>
+                        <a href="About-Us.html">Refund Privacy</a>
+                        <a href="Contact-Us.html">Contact as A Brand Or <br> Seller</a>
+                    </div>
+                    <div class="fast-links">
+                        <h5>News Letter</h5>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Login Now !</a>
+                        <a href="" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">New Account</a>
+                        <a href="favorite-shop.html">Favourites</a>
+                        <a href="cart-shop.html">Cart</a>
+                        <a href="Careers.html">Careers</a>
+                    </div>
+                    <div class="fast-links">
+                        <h5>Customer</h5>
+                        <p>Subscribe to get our recent products</p>
+                        <div class="email-container">
+                            <label>
+                                <input type="email" placeholder="Enter Your Email">
+                            </label>
+                            <button type="submit">Send</button>
                         </div>
                     </div>
                 </div>
-                <div class="second-footer">
-                    <div class="third-footer">
-                        <div class="reserved">
-                            <div class="powered">
-                                <h5>Copyrights Reserved © <span> OLBAC </span>2024</h5>
-                                <p>Powered By Paymac.net</p>
-                            </div>
-                            <h5 class="General">This Website Following General Photographic Industry
-                                <img src="./image/Footer/logoweb400.webp" alt="2020" width="130" height="30">
-                            </h5>
-                        </div>
-                        <div class="footer-logo">
-                            <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" alt="v-cash" width="50"
-                                    height="30" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="meza" width="50"
-                                    height="17" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="Maestro"
-                                    width="50" height="30" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="fawry" width="50"
-                                    height="17" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="visa"
-                                    width="50" height="30" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" width="50" height="30"
-                                    loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="we-pay" width="50"
-                                    height="30" loading="lazy"></a>
-                            <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="meza" width="50"
-                                    height="30" loading="lazy"></a>
-                        </div>
+            </div>
+        </div>
+        <div class="second-footer">
+            <div class="third-footer">
+                <div class="reserved">
+                    <div class="powered">
+                        <h5>Copyrights Reserved © <span> OLBAC </span>2024</h5>
+                        <p>Powered By Paymac.net</p>
                     </div>
+                    <h5 class="General">This Website Following General Photographic Industry
+                        <img src="./image/Footer/logoweb400.webp" alt="2020" width="130" height="30">
+                    </h5>
                 </div>
-            </footer>
-
+                <div class="footer-logo">
+                    <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" alt="v-cash" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="meza" width="50"
+                            height="17" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="Maestro" width="50"
+                            height="30" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Visa_logo.png.webp" alt="fawry" width="50"
+                            height="17" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__Maestro_logo.png.webp" alt="visa" width="50"
+                            height="30" loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__v-cash.webp" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="we-pay" width="50" height="30"
+                            loading="lazy"></a>
+                    <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="meza" width="50" height="30"
+                            loading="lazy"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./src/main.js"></script>
 
 </body>
 

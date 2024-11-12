@@ -174,6 +174,25 @@ swiper = new Swiper(".mobile-swiper", {
   },
 });
 
+window.onscroll = function () {
+  toggleScrollToTopButton();
+};
+
+function toggleScrollToTopButton() {
+  const btn = document.getElementById("scrollToTopBtn");
+  if (
+    document.body.scrollTop > 100 ||
+    document.documentElement.scrollTop > 100
+  ) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 document.querySelectorAll(".toggle-content").forEach((button) => {
   button.addEventListener("click", function (e) {
     e.preventDefault();
@@ -388,3 +407,18 @@ document
   .addEventListener("mouseleave", function () {
     document.querySelector(".user-modal-info").classList.remove("active");
   });
+
+// dropzone
+Dropzone.options.myDropzone = {
+  maxFiles: 1,
+  acceptedFiles: "image/*",
+
+  init: function () {
+    this.on("success", function (file, response) {
+      document.getElementById("profileImage").src = response.filePath;
+      $("#uploadModal").modal("hide");
+    });
+  },
+};
+
+// scroll

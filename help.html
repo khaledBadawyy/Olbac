@@ -17,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alpine lib  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Olbac | online sales</title>
+    <title>Olbac | help</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
@@ -295,41 +295,59 @@
     <!-- end nav-bar  -->
     <!-- end header  -->
     <!-- ---------------------------------------------- -->
+    <!-- start About-Us -->
 
 
-    <!-- start Careers g -->
-    <div class="careers">
-        <div class="career-img">
-            <img src="image/gaenral/jobs.jpg" alt="career" class="">
-        </div>
-
-
+    <div class="contact-page">
         <div class="container">
-            <div class="jobs-container">
-                <h1>Careers</h1>
-                <div class="jobs-tabs-container scrollmenu">
-                    <div class="jobs-tabs">
-                        <a href="Careers.html">All</a>
-                        <a href="Accounting.html">Accounting</a>
-                        <a href="online-sales.html" class="active">online sales</a>
-                        <a href="Manual-workers.html">Manual workers</a>
+            <div class="row">
+                <div class="col-md-8 mb-sm-5">
+                    <div class="form-contact">
+                        <h4>Leave us a Message</h4>
+                        <hr>
+                    </div>
+                    <div class="group-form">
+                        <div class="row">
+                            <div class="col-md-6 d-grid ">
+                                <label for="name">Subject</label>
+                                <input type="text" id="name" required>
+                            </div>
+
+                        </div>
+
+                        <div class="  d-grid">
+                            <label for="text">Message</label>
+                            <textarea name="Message" id="Message"></textarea>
+                        </div>
+                        <button type="submit">Send</button>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="form-contact">
+                        <h4>Address</h4>
+                        <hr>
+                        <p>Administration only: 1 General Street, Corniche Al-Warraq, next to the ring road</p>
+                        <span>01220532478 01200896146 </span><br>
+                        <span>Email olbacegy@gmail.com</span>
+
+                        <div class="icon-addres">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            <i class="fa fa-youtube" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="job-card">
-                <a href="E-commerce-Sales.html" class="job-card-link">
-                    <h4>E-commerce Sales Management Specialist</h4>
-                    <p class="sales">online sales</p>
-                    <p class="commerce">An E-commerce Sales Management Specialist plays a pivotal role in overseeing and
-                        optimizing the
-                        sales operations for online platforms like Amazon, Jumia, and Noon....</p>
-                </a>
-                <a href="" class="continue">continue</a>
-            </div>
-
+        </div>
+        <div>
+            <div class="map"></div>
         </div>
     </div>
-    <!-- end   Careers  -->
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -396,6 +414,7 @@
             </div>
         </div>
     </div>
+
     <footer class="footer">
         <div class="subscribe">
             <div class=" img-sub">
@@ -478,15 +497,18 @@
                     <a href=""><img src="./image/Footer/AnyConv.com__w-cash.webp" alt="meza" width="50" height="30"
                             loading="lazy"></a>
                 </div>
-            </div>f
+            </div>
         </div>
     </footer>
 
 
 
 
+    <!-- end About-Us -->
     <script src="./src/main.js" defer></script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiHXEeByxxXnriRpYTxopcp0CL6vlCnwg&libraries=places"
+        async defer onload="initMap()"></script>
 </body>
 
 </html>
