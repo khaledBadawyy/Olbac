@@ -17,18 +17,36 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- alpine lib  -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <!-- drop-zone  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"></script>
-    <title>Olbac | My Orders</title>
+
+
+    <!-- CSS for Select2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- jQuery (Select2 depends on it) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript for Select2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Alpine Plugins -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- Alpine Core -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+
+
+    <title>Olbac | shipping</title>
     <link rel="icon" href="image/gaenral/ico.png" type="image/jpg" sizes="16x16">
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-    <button id="scrollToTopBtn" onclick="scrollToTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
     <!-- start navbar mobile  -->
-
+    <button class="scroll-to-top-btn" id="scrollToTopBtn" onclick="scrollToTop()"><i class="fa fa-arrow-up"
+            aria-hidden="true"></i></button>
+    <!-- start navbar mobile  -->
     <div class="navbars ">
         <a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
         <a href="#"><i class="fa fa-minus" aria-hidden="true"></i>Deals</a>
@@ -139,7 +157,7 @@
                     <a href=""><i class="fa fa-volume-control-phone" aria-hidden="true"></i> Contact Us A Brand Or
                         Seller</a>
                     <a href="About-Us.html"><i class="fa fa-info-circle" aria-hidden="true"></i> About Us</a>
-                    <a href="Careers.html"><i class="fa fa-briefcase" aria-hidden="true"></i> Careers</a>
+                    <a href=""><i class="fa fa-briefcase" aria-hidden="true"></i> Careers</a>
 
                     <!-- Social Media Icons -->
                     <div class="icon-menu">
@@ -175,7 +193,8 @@
 
             <!-- Navigation Icons -->
             <div class=" deal-logos d-flex align-items-center navigation-icons ">
-                <img class="deal-zone" src="image/gaenral/dealzone_LE_auto_x2.jpg" alt="zone" width="100" height="50">
+                <img class="deal-zone" src="image/gaenral/dealzone_LE_auto_x2.jpg" alt="zone" width="100" height="50"
+                    loading="lazy">
 
 
                 <a href=""><img class="masr" src="image/gaenral/mas3.png" alt="Flag" width="70" height="74"
@@ -298,133 +317,201 @@
     <!-- end nav-bar  -->
     <!-- end header  -->
     <!-- ---------------------------------------------- -->
-
-
-    <div class="profile-info">
-
-        <div class="profile-info-img">
-            <h1>Khaled E_lbeah</h1>
-
+    <!-- start About-Us -->
+    <div class="shipping">
+        <div class="content-steps">
+            <ul class="progress-timeline">
+                <li class="active"> Shipping</li>
+                <li>Payment</li>
+                <li>Done</li>
+            </ul>
         </div>
+        <div class="shipping-cart">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1> Ship To My Address </h1>
+                        <div class="addres">
+                            <div class="radio-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1" checked>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-lg-4">
-                    <div class="main-profile-order">
-                        <div class="img-info" data-bs-toggle="modal" data-bs-target="#uploadModal">
-                            <img id="profileImage" src="image/gaenral/nmed.jpg" alt="">
-                            <i class="fa fa-picture-o" aria-hidden="true"></i>
-                        </div>
+                                    <p>
+                                        <input type="radio" id="test1" name="radio-group">
+                                        <label for="test1">
+                                            Al Monufia -Ashmoon - Street: In qui velit minim q - Building: Ea quam alias
+                                            quam l - Foor Number: 542 - Flat Number: 584m, Details: Totam dolor consequa
+                                        </label>
+                                    </p>
+                                    <a href="" data-bs-target="#exampleModaldAdress" data-bs-toggle="modal">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                                <div class="form-check">
+                                    <p>
+                                        <input type="radio" id="test2" name="radio-group">
+                                        <label for="test2">
+                                            Al Monufia -Ashmoon - Street: In qui velit minim q - Building: Ea quam alias
+                                            quam l - Foor Number: 542 - Flat Number: 584m, Details: Totam dolor consequa
+                                        </label>
+                                    </p>
+                                    <a href="" data-bs-target="#exampleModaldAdress" data-bs-toggle="modal">
+                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                    </a>
 
-
-                        <!-- Bootstrap Modal -->
-                        <div class="modal fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="uploadModalLabel">Upload Profile Picture</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form id="myDropzone" class="dropzone" action="/upload">
-                                            <div class="dz-message">Drag & drop a picture here or click to upload
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="sub-profile">
-                            <div class="info-user">
-                                <p>Khaled E_lbeah</p>
-                                <p>badawy.elbeah22@gmail.com</p>
-                            </div>
-                            <div class="main-Settings">
-                                <div class="Settings">
-                                    <p>Settings</p>
-                                </div>
-                                <div class="country">
-                                    <p> <i class="fa fa-globe" aria-hidden="true"></i> Country </p>
-                                    <div class="dropdown">
-                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <img src="image/gaenral/egypt.png" alt="" srcset="">
-                                        </button>
-                                        <ul class="dropdown-menu ">
-                                            <li><a class="dropdown-item" href="#">Egypt</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="main-Language">
-                                <p> <i class="fa fa-language" aria-hidden="true"></i> Language </p>
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        English
-                                    </button>
-                                    <ul class="dropdown-menu ">
-                                        <li><a class="dropdown-item" href="#">Arabic</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="main-profile-links">
-                                <a href="favorite-shop.html"><i class="fa fa-heart" aria-hidden="true"></i>Favourite</a>
-                                <a href="My-orders.html"><i class="fa fa-first-order" aria-hidden="true"></i>My
-                                    Orders</a>
-                                <a href="cart-shop.html"><i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                                    Basket</a>
-                                <a href="help.html"><i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    Help</a>
-                            </div>
-                            <a href=" " class="logout"> Logout</a>
+                            <a class="new-add" href="#" data-bs-target="#exampleModaldAdress" data-bs-toggle="modal">New
+                                Address</a>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="shoping-product">
+                            <div class="shipping-title">
+                                <h4>Shopping Cart</h4>
+                                <p>Back Top Cart</p>
+                            </div>
+                            <a href="" class="product-box">
+                                <div class="img-product">
+                                    <img src="image/gaenral/cam0.jpg" alt="shipping-img">
+                                </div>
+                                <div class="product-box-details">
+                                    <span>Cameras</span>
+                                    <p class="title-of-box">FUJIFILM X100V Digital Camera (Silver)</p>
+
+                                    <div class="quantity-of-box">
+                                        <p class="price-of-box">104999.00 EGP</p>
+                                        <label for="text">Quantity :</label>
+                                        <input type="number" aria-selected="false">
+                                    </div>
+
+                                </div>
+                            </a>
+                            <a href="" class="product-box">
+                                <div class="img-product">
+                                    <img src="image/gaenral/cam0.jpg" alt="shipping-img">
+                                </div>
+                                <div class="product-box-details">
+                                    <span>Cameras</span>
+                                    <p class="title-of-box">FUJIFILM X100V Digital Camera (Silver)</p>
+
+                                    <div class="quantity-of-box">
+                                        <p class="price-of-box">104999.00 EGP</p>
+                                        <label for="text">Quantity :</label>
+                                        <input type="number" aria-selected="false">
+                                    </div>
+
+                                </div>
+                            </a>
+                            <a href="" class="product-box">
+                                <div class="img-product">
+                                    <img src="image/gaenral/cam0.jpg" alt="shipping-img">
+                                </div>
+                                <div class="product-box-details">
+                                    <span>Cameras</span>
+                                    <p class="title-of-box">FUJIFILM X100V Digital Camera (Silver)</p>
+
+                                    <div class="quantity-of-box">
+                                        <p class="price-of-box">104999.00 EGP</p>
+                                        <label for="text">Quantity :</label>
+                                        <input type="number" aria-selected="false">
+                                    </div>
+
+                                </div>
+                            </a>
+                            <a href="" class="product-box">
+                                <div class="img-product">
+                                    <img src="image/gaenral/cam0.jpg" alt="shipping-img">
+                                </div>
+                                <div class="product-box-details">
+                                    <span>Cameras</span>
+                                    <p class="title-of-box">FUJIFILM X100V Digital Camera (Silver)</p>
+
+                                    <div class="quantity-of-box">
+                                        <p class="price-of-box">104999.00 EGP</p>
+                                        <label for="text">Quantity :</label>
+                                        <input type="number" aria-selected="false">
+                                    </div>
+
+                                </div>
+                            </a>
+                            <div class="group-shipping-total">
+                                <div class="shipping-item">
+                                    <p>item(s):</p>
+                                    <span>6</span>
+
+                                </div>
+
+                                <div class="shipping-price">
+                                    <p>+ shipping:</p>
+                                    <span>70 EGP</span>
+
+                                </div>
+
+                                <div class="grand-total">
+                                    <p>Grand Total:</p>
+                                    <span>263,814 EGP</span>
+
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+                        <a href="payment.html" class="with-pay">Continue with pay</a>
+                    </div>
                 </div>
-                <div class="col-md-12 col-lg-8">
-                    <div class="person-order">
+            </div>
+        </div>
+    </div>
+    <!-- start modal edit  -->
+    <div class="modal fade" id="exampleModaldAdress" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-content-aderss">
+                <i class=" fa fa-times" data-bs-dismiss="modal" aria-hidden="true"></i>
+                <div class="modal-body">
+                    <h1 class="modal-title" id="exampleModalLabel">Welcome Back!</h1>
+                    <label for="city">City:</label>
+                    <select id="city" style="width: 100%;">
+                        <option value="al-meniya">Al Meniya</option>
+                        <option value="al-monufia">Al Monufia</option>
+                        <option value="al-sharqia">Al Sharqia</option>
+                        <option value="alexandria">Alexandria</option>
+                        <option value="aswan">Aswan</option>
+                        <option value="asyut">Asyut</option>
+                    </select>
+
+                    <label for="area">Area:</label>
+                    <select id="area" style="width: 100%;">
+                        <option value="al-meniya">Al Meniya</option>
+                        <option value="al-monufia">Al Monufia</option>
+                        <option value="al-sharqia">Al Sharqia</option>
+                        <option value="alexandria">Alexandria</option>
+                        <option value="aswan">Aswan</option>
+                        <option value="asyut">Asyut</option>
+                    </select>
+
+                    <label for="text" style="width: 100%;">Building :</label>
+                    <input class="add-build" type="text">
+                    <label for="text" style="width: 100%;">street :</label>
+                    <input class="add-street" type="text">
+                    <div class="group-input-one">
                         <div>
-                            <h3>My Orders</h3>
+                            <label for="text">Floor Number:</label>
+                            <input class="add-floort" type="text">
                         </div>
-                        <!-- <div class="shop-order">
-                            <a class="shop-now" href="index.html"> Shop Now</a>
-                        </div> -->
-                        <a href="">
-                            <div class="Order-box">
-                                <div class="order-info">
-                                    <div class="order-img">
-                                        <img src="image/gaenral/1.png" alt="">
-                                    </div>
-                                    <div class="Order-detailes">
-                                        <p class="order-number">Order: # 1791</p>
-                                        <p class="order-price">110 EGP</p>
-                                        <p class="order-review">delivered</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="Order-box">
-                                <div class="order-info">
-                                    <div class="order-img">
-                                        <img src="image/gaenral/1.png" alt="">
-                                    </div>
-                                    <div class="Order-detailes">
-                                        <p class="order-number">Order: # 1791</p>
-                                        <p class="order-price">10,850 EGP</p>
-                                        <p class="order-review">delivered</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        <div>
+                            <label for="text">Flat Number:</label>
+                            <input class="add-flat" type="text">
+                        </div>
                     </div>
+
+                    <label for="text" style="width: 100%;">Address Details</label>
+                    <input class="add-detailes" type="text">
                 </div>
+                <a href="">Save</a>
             </div>
         </div>
     </div>
@@ -494,7 +581,6 @@
             </div>
         </div>
     </div>
-
     <footer class="footer">
         <div class="subscribe">
             <div class=" img-sub">
@@ -580,7 +666,7 @@
             </div>
         </div>
     </footer>
-
+    <!-- end About-Us -->
     <script src="./src/main.js" defer></script>
 </body>
 

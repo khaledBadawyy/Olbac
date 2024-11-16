@@ -337,6 +337,20 @@ function heartIconCart(heartIcon) {
   }
 }
 
+// radio
+document.querySelectorAll(".credit-debit").forEach((option) => {
+  option.addEventListener("click", function () {
+    document.querySelectorAll(".credit-debit").forEach((item) => {
+      item.classList.remove("active");
+      item.querySelector("input[type='radio']").checked = false;
+    });
+
+    this.classList.add("active");
+    const radioId = this.getAttribute("data-radio");
+    document.getElementById(radioId).checked = true;
+  });
+});
+
 const toast = document.getElementById("toast");
 const toastTimer = document.getElementById("toast-timer");
 
@@ -369,6 +383,21 @@ function confirmDelete(productId) {
   }
 }
 
+$(document).ready(function () {
+  $("#exampleModaldAdress").on("shown.bs.modal", function () {
+    $("#city").select2({
+      placeholder: "Select a city",
+      allowClear: true,
+      dropdownParent: $("#exampleModaldAdress"),
+    });
+
+    $("#area").select2({
+      placeholder: "Select an area",
+      allowClear: true,
+      dropdownParent: $("#exampleModaldAdress"),
+    });
+  });
+});
 // map
 function initMap() {
   const myLatlng = { lat: 29.978576788059428, lng: 30.935669975032056 };
@@ -421,4 +450,7 @@ Dropzone.options.myDropzone = {
   },
 };
 
-// scroll
+document.querySelector(".toggle-coupon").addEventListener("click", function () {
+  const couponContainer = document.querySelector(".coupon-container");
+  couponContainer.classList.toggle("open");
+});
