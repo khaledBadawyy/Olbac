@@ -3413,6 +3413,11 @@ a.with-pay {
   box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.1);
   margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+  .payment-product {
+    margin-bottom: -40px;
+  }
+}
 .payment-product .shipping-title {
   display: flex;
   justify-content: space-between;
@@ -3446,7 +3451,7 @@ a.with-pay {
 .payment-product .group-shipping-total {
   background-color: #f0f2f7;
   height: auto;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 .payment-product .group-shipping-total h5 {
   background-color: white;
@@ -3532,7 +3537,12 @@ a.with-pay {
   align-items: center;
   transition: 0.4s all ease-in-out;
 }
-
+@media (max-width: 768px) {
+  .credit-debit {
+    height: auto;
+    display: block;
+  }
+}
 .credit-debit.active {
   background-color: rgb(206, 213, 225);
   transform: scale(1.1);
@@ -3620,6 +3630,7 @@ a.with-pay {
   padding: 7px;
   margin-top: 15px;
   border-radius: 5px;
+  margin-bottom: 25px;
 }
 .order-summery {
   text-align: center;
@@ -3627,6 +3638,7 @@ a.with-pay {
   margin: 4px 20px;
   padding: 13px;
   border-radius: 5px;
+  margin-top: 20px;
 }
 .order-summery h4 {
   font-weight: bold;
@@ -3650,4 +3662,10 @@ a.continue-shopping {
   border-radius: 5px;
   width: 35%;
   margin: 8px auto;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  a.continue-shopping {
+    width: 50%;
+  }
 }

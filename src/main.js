@@ -173,6 +173,10 @@ swiper = new Swiper(".mobile-swiper", {
     disableOnInteraction: false,
   },
 });
+document.querySelector(".toggle-coupon").addEventListener("click", function () {
+  const couponContainer = document.querySelector(".coupon-container");
+  couponContainer.classList.toggle("open");
+});
 
 window.onscroll = function () {
   toggleScrollToTopButton();
@@ -449,8 +453,3 @@ Dropzone.options.myDropzone = {
     });
   },
 };
-
-document.querySelector(".toggle-coupon").addEventListener("click", function () {
-  const couponContainer = document.querySelector(".coupon-container");
-  couponContainer.classList.toggle("open");
-});
