@@ -194,7 +194,7 @@ window.onscroll = function () {
 };
 
 function toggleScrollToTopButton() {
-  const btn = document.getElementById("scrollToTopBtn");
+  const btn = document.querySelector(".scrollToTopBtn");
   if (
     document.body.scrollTop > 100 ||
     document.documentElement.scrollTop > 100

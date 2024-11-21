@@ -3021,7 +3021,7 @@ img.user-img {
 /* person-order */
 
 /* scroll button  */
-#scrollToTopBtn {
+.scrollToTopBtn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -3036,15 +3036,15 @@ img.user-img {
   z-index: 100;
 }
 
-#scrollToTopBtn:hover {
+.scrollToTopBtn:hover {
   background-color: #748a91;
 }
 
 @media (max-width: 768px) {
-  #scrollToTopBtn {
+  .scrollToTopBtn {
     bottom: 70px;
   }
-  #scrollToTopBtn:hover {
+  .scrollToTopBtn:hover {
     background-color: var(--main-color);
   }
 }
