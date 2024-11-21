@@ -3993,6 +3993,8 @@ a.continue-shopping {
     text-align: center;
     margin-top: 40px;
   }
+  .modal-content img {
+  }
 }
 
 .modal {
@@ -4023,5 +4025,11 @@ a.continue-shopping {
 }
 .modal-content h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.modal-content img {
+  width: 200px;
+  height: 140px;
+  margin: -40px auto auto auto;
 }
